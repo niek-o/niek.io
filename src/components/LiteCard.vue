@@ -5,14 +5,14 @@ const props = defineProps<{
   track: pageOptions
 }>()
 
-const { backgroundColor, iconColor, buttonColor } = props.track
+const { backgroundColor, iconColor } = props.track
 </script>
 
 <template>
 <router-link :to=track.pagePath class="frame">
   <img :src=track.coverURL alt="ALBUM COVER" class="w-full"/>
   <div class="card">
-    <div class="flex-shrink mx-auto col-span-full">
+    <div class="flex-shrink mx-auto w-11/12">
       <h1 class="title font-black text-2xl">
         {{ track.title }}
       </h1>
@@ -32,7 +32,7 @@ const { backgroundColor, iconColor, buttonColor } = props.track
 
 .title, .type {
   color: v-bind(iconColor);
-  @apply w-full text-center
+  @apply w-auto text-center
 }
 
 .frame {

@@ -2,7 +2,7 @@
 import FullCard from "../components/FullCard.vue"
 import {findItem} from "../utils/content";
 
-const data = findItem("Hatsune Miku - World Is Mine (Geoxor Remix) [Niek Edit]")
+const data = findItem("Hatsune Miku - World Is Mine (Geoxor Remix) [Niek Edit]")!
 </script>
 
 <template>

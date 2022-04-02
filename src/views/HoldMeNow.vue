@@ -2,7 +2,7 @@
 import FullCard from "../components/FullCard.vue"
 import {findItem} from "../utils/content";
 
-const data = findItem("HOLD ME NOW")
+const data = findItem("HOLD ME NOW")!
 </script>
 
 <template>

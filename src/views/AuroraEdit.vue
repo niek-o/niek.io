@@ -2,7 +2,7 @@
 import FullCard from "../components/FullCard.vue"
 import {findItem} from "../utils/content";
 
-const data = findItem("Geoxor - Aurora (Niek Edit)")
+const data = findItem("Geoxor - Aurora (Niek Edit)")!
 </script>
 
 <template>

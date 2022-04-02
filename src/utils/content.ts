@@ -47,7 +47,7 @@ export const content: pageOptions[] = [
 		pagePath: "/mikuremix",
 	},
 	{
-		title: "Niek & Karasu Merodi - Afterlife",
+		title: "AFTERLIFE",
 		releaseType: "SINGLE",
 		buttonColor: "#3268C2",
 		buttonTextColor: "#FFFFFF",
