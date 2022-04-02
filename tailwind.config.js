@@ -4,6 +4,7 @@ module.exports = {
 		extend: {
 			spacing: {
 				22: "5.5rem",
+				homecard: "22rem",
 			},
 		},
 	},

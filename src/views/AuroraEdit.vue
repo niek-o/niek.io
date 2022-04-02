@@ -1,24 +1,17 @@
 <script setup lang="ts">
 import Card from "../components/Card.vue";
 import NameCard from "../components/NameCard.vue";
-import {pageOptions} from "../utils/typings";
+import {findItem} from "../utils/content";
 
-const options: pageOptions = {
-  title: "Geoxor - Aurora (Niek Edit)",
-  releaseType: "EDIT",
-  buttonColor: "#7C67A6",
-  buttonTextColor: "#FFFFFF",
-  backgroundColor: "#FFFFFF",
-  iconColor: "#7C67A6",
-}
+const data = findItem("Geoxor - Aurora (Niek Edit)")
 </script>
 
 <template>
-  <img src="../assets/aurora-edit-cover.png" alt="Album cover" class="background object-cover w-full h-full">
+  <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
   <div class="frame mb-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
-    <img src="../assets/aurora-edit-cover.png" alt="ALBUM COVER" class="w-full"/>
-    <NameCard :type=options.releaseType :title=options.title :text-color=options.iconColor :background-color=options.backgroundColor />
-    <Card type="WATCH" url="https://www.youtube.com/watch?v=Bww_cOc51XQ" track-source="Youtube" :button-color=options.buttonColor :text-color=options.buttonTextColor :background-color=options.backgroundColor :icon-color=options.iconColor />
+    <img :src=data.coverURL alt="ALBUM COVER" class="w-full"/>
+    <NameCard :type="data.releaseType" :title=data.title :text-color=data.iconColor :background-color=data.backgroundColor />
+    <Card type="WATCH" :url=data.youtubeLink track-source="Youtube" :button-color=data.buttonColor :text-color=data.buttonTextColor :background-color=data.backgroundColor :icon-color=data.iconColor />
   </div>
 </template>
 
@@ -41,7 +34,9 @@ const options: pageOptions = {
 
 @media screen and (max-width: 600px) {
   .frame {
-    width: 100vw;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 </style>

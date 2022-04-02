@@ -22,6 +22,11 @@ const routes: RouteRecordRaw[] = [
 		component: () => import("../views/MikuRemix.vue"),
 	},
 	{
+		path: "/afterlife",
+		name: "Afterlife",
+		component: () => import("../views/Afterlife.vue"),
+	},
+	{
 		path: "/partygirl",
 		name: "PartyGirl",
 		component: () => import("../views/PartyGirl.vue"),
@@ -30,6 +35,11 @@ const routes: RouteRecordRaw[] = [
 		path: "/theuniverse",
 		name: "TheUniverse",
 		component: () => import("../views/TheUniverse.vue"),
+	},
+	{
+		path: "/",
+		name: "Home",
+		component: () => import("../views/Home.vue"),
 	},
 ];
 const router = createRouter({

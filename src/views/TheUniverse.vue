@@ -1,26 +1,19 @@
 <script setup lang="ts">
 import Card from "../components/Card.vue";
 import NameCard from "../components/NameCard.vue";
-import {pageOptions} from "../utils/typings";
+import {findItem} from "../utils/content";
 
-const options: pageOptions = {
-  title: "THE UNIVERSE",
-  releaseType: "ALBUM",
-  buttonColor: "#d13b3b",
-  buttonTextColor: "#FFFFFF",
-  backgroundColor: "#090909",
-  iconColor: "#FFFFFF"
-}
+const data = findItem("THE UNIVERSE")
 </script>
 
 <template>
-  <img src="../assets/the-universe-cover.jpg" alt="Album cover" class="background object-cover w-full h-full">
+  <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
   <div class="frame mb-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
-    <img src="../assets/the-universe-cover.jpg" alt="ALBUM COVER" class="w-full"/>
-    <NameCard :type="options.releaseType" :title=options.title :text-color=options.iconColor :background-color=options.backgroundColor />
-    <Card type="WATCH" url="https://www.youtube.com/watch?v=iSjcrdLrD2k&list=PL41zV4hHhDYZQ13NT6PdggpKWDquDUzyt" track-source="Youtube" :button-color=options.buttonColor :text-color=options.buttonTextColor :background-color=options.backgroundColor :icon-color=options.iconColor />
-    <Card type="STREAM" url="https://open.spotify.com/album/2lj7IEMCthtOMSGiD5ooBQ?si=17WS8oihRNSk6bqMVBxtHg" track-source="Spotify" :button-color=options.buttonColor :text-color=options.buttonTextColor :background-color=options.backgroundColor :icon-color=options.iconColor />
-    <Card type="STREAM" url="https://soundcloud.com/niek_o/sets/the-universe" track-source="SoundCloud" :button-color=options.buttonColor :text-color=options.buttonTextColor :background-color=options.backgroundColor :icon-color=options.iconColor />
+    <img :src=data.coverURL alt="ALBUM COVER" class="w-full"/>
+    <NameCard :type="data.releaseType" :title=data.title :text-color=data.iconColor :background-color=data.backgroundColor />
+    <Card type="WATCH" :url=data.youtubeLink track-source="Youtube" :button-color=data.buttonColor :text-color=data.buttonTextColor :background-color=data.backgroundColor :icon-color=data.iconColor />
+    <Card type="STREAM" :url=data.spotifyLink track-source="Spotify" :button-color=data.buttonColor :text-color=data.buttonTextColor :background-color=data.backgroundColor :icon-color=data.iconColor />
+    <Card type="STREAM" :url=data.soundcloudLink track-source="SoundCloud" :button-color=data.buttonColor :text-color=data.buttonTextColor :background-color=data.backgroundColor :icon-color=data.iconColor />
   </div>
 </template>
 
@@ -43,7 +36,9 @@ const options: pageOptions = {
 
 @media screen and (max-width: 600px) {
   .frame {
-    width: 100vw;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 </style>
