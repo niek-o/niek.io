@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import Card from "../components/Card.vue";
-import NameCard from "../components/NameCard.vue";
+import FullCard from "../components/FullCard.vue"
 import {findItem} from "../utils/content";
 
 const data = findItem("Hatsune Miku - World Is Mine (Geoxor Remix) [Niek Edit]")
@@ -8,11 +7,7 @@ const data = findItem("Hatsune Miku - World Is Mine (Geoxor Remix) [Niek Edit]")
 
 <template>
   <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
-  <div class="frame mb-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
-    <img :src=data.coverURL alt="ALBUM COVER" class="w-full"/>
-    <NameCard :type="data.releaseType" :title=data.title :text-color=data.iconColor :background-color=data.backgroundColor />
-    <Card type="WATCH" :url=data.youtubeLink track-source="Youtube" :button-color=data.buttonColor :text-color=data.buttonTextColor :background-color=data.backgroundColor :icon-color=data.iconColor />
-  </div>
+  <FullCard :track=data class="frame"/>
 </template>
 
 <style scoped>

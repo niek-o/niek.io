@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NameCard from "../components/NameCard.vue";
+import LiteCard from "../components/LiteCard.vue";
 import {content} from "../utils/content";
 
 </script>
@@ -63,12 +63,7 @@ import {content} from "../utils/content";
   <img src="../assets/logo.png" alt="NIEK LOGO" class="mx-auto w-24">
 </div>
 <div class="grid home place-items-center">
-  <div class="frame max-w-full w-homecard mt-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden" v-for="item in content">
-    <router-link :to=item.pagePath>
-      <img :src=item.coverURL alt="ALBUM COVER" class="w-full"/>
-      <NameCard :type="item.releaseType" :title=item.title :text-color=item.iconColor :background-color=item.backgroundColor />
-    </router-link>
-  </div>
+  <LiteCard v-for="item in content" :track=item />
 </div>
 </template>
 
