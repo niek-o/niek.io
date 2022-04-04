@@ -60,7 +60,7 @@ import {content} from "../utils/content";
     }"
   />
 <div class="topbar w-full h-full bg-black drop-shadow-lg grid items-center">
-  <img src="../assets/logo.png" alt="NIEK LOGO" class="flex flex-row flex-shrink justify-self-start ml-5 w-24">
+  <img src="/images/logo.png" alt="NIEK LOGO" class="flex flex-row flex-shrink justify-self-start ml-5 w-24">
   <div class="flex flex-row flex-shrink justify-self-end mr-5">
     <a href="https://www.youtube.com/c/Frankenstein795" target="_blank">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -5 24 24" width="24"><path d="M15.812.017H4.145C1.855.017 0 1.852 0 4.116v5.768c0 2.264 1.856 4.1 4.145 4.1h11.667c2.29 0 4.145-1.836 4.145-4.1V4.116c0-2.264-1.856-4.1-4.145-4.1zM13.009 7.28L7.552 9.855a.219.219 0 0 1-.314-.196V4.35c0-.161.173-.266.318-.193l5.458 2.735a.216.216 0 0 1-.005.389z"></path></svg>

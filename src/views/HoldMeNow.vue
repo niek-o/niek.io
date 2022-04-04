@@ -6,7 +6,7 @@ const data = findItem("HOLD ME NOW")!
 </script>
 
 <template>
-  <img src="https://i.imgur.com/R9r1DwF.jpg" alt="Album cover" class="background object-cover w-full h-full">
+  <img src="/images/hold-me-now-background.png" alt="Album cover" class="background object-cover w-full h-full">
   <FullCard :track=data class="frame"/>
 </template>
 
