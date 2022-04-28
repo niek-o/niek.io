@@ -1,5 +1,3 @@
-export type typings = "Spotify" | "Youtube" | "SoundCloud";
-
 export type pageOptions = {
 	title: string;
 	releaseType: releaseType;

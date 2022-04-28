@@ -1,16 +1,19 @@
 import { pageOptions } from "./typings";
 
 export const content: pageOptions[] = [
-	// {
-	// 	title: "NIGHTMARE",
-	// 	releaseType: "SINGLE",
-	// 	buttonColor: "#A90000",
-	// 	buttonTextColor: "#FFFFFF",
-	// 	backgroundColor: "#000000",
-	// 	iconColor: "#FFFFFF",
-	// 	coverURL: "/images/nightmare-cover.jpg",
-	// 	pagePath: "/nightmare",
-	// },
+	{
+		title: "NIGHTMARE",
+		releaseType: "SINGLE",
+		buttonColor: "#A90000",
+		buttonTextColor: "#FFFFFF",
+		backgroundColor: "#000000",
+		iconColor: "#FFFFFF",
+		coverURL: "/images/nightmare-cover.jpg",
+		youtubeLink: "https://www.youtube.com/watch?v=q3fXUb1LVAI",
+		spotifyLink: "https://open.spotify.com/album/1dfhGweMVsc1xgEfkPlE7X?si=rjVT75e4TUSUmTEBNRbhhA",
+		soundcloudLink: "https://soundcloud.com/niek_o/nightmare",
+		pagePath: "/nightmare",
+	},
 	{
 		title: "HOLD ME NOW",
 		releaseType: "SINGLE",
