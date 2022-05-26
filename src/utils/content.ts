@@ -2,6 +2,17 @@ import { pageOptions } from "./typings";
 
 export const content: pageOptions[] = [
 	{
+		title: "Geoxor - Kill Aura (Niek Edit)",
+		releaseType: "EDIT",
+		buttonColor: "#FFFFFF",
+		buttonTextColor: "#000000",
+		backgroundColor: "#52a5cb",
+		iconColor: "#FFFFFF",
+		coverURL: "/images/kill-aura-edit-cover.jpg",
+		youtubeLink: "https://www.youtube.com/watch?v=4XTAtu-fh7o",
+		pagePath: "/killauraedit",
+	},
+	{
 		title: "NIGHTMARE",
 		releaseType: "SINGLE",
 		buttonColor: "#A90000",

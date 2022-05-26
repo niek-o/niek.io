@@ -2,6 +2,11 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
 	{
+		path: "/killauraedit",
+		name: "KillAuraEdit",
+		component: () => import("../views/KillAuraEdit.vue"),
+	},
+	{
 		path: "/nightmare",
 		name: "Nightmare",
 		component: () => import("../views/Nightmare.vue"),

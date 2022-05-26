@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "electron:start": "electron .",
+    "start": "yarn build && yarn electron:start"
   },
   "dependencies": {
     "eslint-config-prettier": "^8.5.0",
