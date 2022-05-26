@@ -5,7 +5,7 @@ export const content: pageOptions[] = [
 		title: "Geoxor - Kill Aura (Niek Edit)",
 		releaseType: "EDIT",
 		buttonColor: "#FFFFFF",
-		buttonTextColor: "#000000",
+		buttonTextColor: "#52a5cb",
 		backgroundColor: "#52a5cb",
 		iconColor: "#FFFFFF",
 		coverURL: "/images/kill-aura-edit-cover.jpg",
