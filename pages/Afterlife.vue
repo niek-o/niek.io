@@ -14,11 +14,11 @@ const trackData = data.value.Afterlife;
 // })
 
 useHead({
-  meta: [
-    { name: "title", content: `${ trackData.title }` },
+  title: trackData.title,
+  meta:  [
     { name: "og:title", content: `${ trackData.title }` },
-    { name: "og:image", content: `"https://niek.space" + ${ trackData.coverURL }` },
-    { name: "og:url", content: `"https://niek.space" + ${ trackData.pagePath }` }
+    { name: "og:image", content: `${ "https://niek.space" + trackData.coverURL }` },
+    { name: "og:url", content: `${ "https://niek.space" + trackData.pagePath }` }
   ]
 });
 </script>
