@@ -7,12 +7,15 @@ useHead({
   title: trackData.title,
   meta:  [
     { name: "og:title", content: `${ trackData.title }` },
-    { name: "og:description", content: `${ trackData.title } OUT NOW` },
+    // { name: "og:description", content: `${ trackData.title } OUT NOW` },
     { name: "og:image", content: `${ "https://niek.space" + trackData.coverURL }` },
     { name: "og:url", content: `${ "https://niek.space" + trackData.pagePath }` },
 
+    { name: "theme-color", content: `${ trackData.buttonColor }` },
+    { name: "type", content: "photo" },
+
     { name: "twitter:title", content: `${ trackData.title }` },
-    { name: "twitter:description", content: `${ trackData.title } OUT NOW` },
+    // { name: "twitter:description", content: `${ trackData.title } OUT NOW` },
     { name: "twitter:domain", content: "https://niek.space/" },
     { name: "twitter:url", content: `${ "https://niek.space" + trackData.pagePath }` },
     { name: "twitter:image", content: `${ "https://niek.space" + trackData.coverURL }` },
