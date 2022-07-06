@@ -8,8 +8,8 @@ useMeta({
   og: {
     title: trackData.title,
     type: "website",
-    image: trackData.coverURL,
-    url: "http://niek.space" + trackData.pagePath
+    image: "https://niek.space" + trackData.coverURL,
+    url: "https://niek.space" + trackData.pagePath
   }
 })
 </script>
