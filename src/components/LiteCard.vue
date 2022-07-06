@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import {pageOptions} from "../utils/typings";
+import { pageOptions } from "../utils/typings";
 
 const props = defineProps<{
   track: pageOptions
-}>()
+}>();
 
-const { backgroundColor, iconColor } = props.track
+const { backgroundColor, iconColor } = props.track;
 </script>
 
 <template>
-<router-link :to=track.pagePath class="frame">
-  <img :src=track.coverURL alt="ALBUM COVER" class="w-full"/>
-  <div class="card">
-    <div class="flex-shrink mx-auto w-11/12">
-      <h1 class="title font-black text-2xl">
-        {{ track.title }}
-      </h1>
-      <h2 class="type font-light text-sm">
-        {{ track.releaseType }}
-      </h2>
+  <router-link :to=track.pagePath class="frame">
+    <img :src=track.coverURL alt="ALBUM COVER" class="w-full" />
+    <div class="card">
+      <div class="flex-shrink mx-auto w-11/12">
+        <h1 class="title font-black text-2xl">
+          {{ track.title }}
+        </h1>
+        <h2 class="type font-light text-sm">
+          {{ track.releaseType }}
+        </h2>
+      </div>
     </div>
-  </div>
-</router-link>
+  </router-link>
 </template>
 
 <style scoped>

@@ -2,11 +2,11 @@
 import FullCard     from "../components/FullCard.vue";
 import { findItem } from "../utils/content";
 
-const data = findItem("Geoxor - Aurora (Niek Edit)")!;
+const data = findItem("FORBIDDEN NIGHTS")!;
 </script>
 
 <template>
-  <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
+  <img src="/images/forbidden-nights-background.jpg" alt="Album cover" class="background object-cover w-full h-full">
   <FullCard :track=data class="frame" />
 </template>
 
