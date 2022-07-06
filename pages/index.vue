@@ -16,7 +16,6 @@ useHead({
     { name: "twitter:domain", content: "https://niek.space/" },
     { name: "twitter:url", content: "https://niek.space" },
     { name: "twitter:image", content: "https://niek.space/images/logo.png" },
-    { name: "twitter:card", content: "summary_large_image" },
   ]
 });
 </script>
