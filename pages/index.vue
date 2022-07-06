@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { content } from "~/utils/content";
-
+const {data} = await useFetch("/api/content")
 </script>
 
 <template>
@@ -33,7 +32,7 @@ import { content } from "~/utils/content";
       </div>
     </div>
     <div class="grid home place-items-center">
-      <LiteCard v-for="item in content" :track=item />
+      <LiteCard v-for="item in data" :track=item />
     </div>
   </div>
 </template>

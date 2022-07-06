@@ -13,7 +13,7 @@ const { backgroundColor, iconColor } = props.track;
     <img :src=track.coverURL alt="ALBUM COVER" class="w-full" />
     <div class="card">
       <div class="flex-shrink mx-auto w-11/12">
-        <h1 class="title font-black text-2xl">
+        <h1 class="title font-bold text-2xl">
           {{ track.title }}
         </h1>
         <h2 class="type font-light text-sm">

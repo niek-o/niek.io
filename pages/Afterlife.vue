@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { findItem } from "~/utils/content";
+const { data } = await useFetch("/api/content", { pick: ["Afterlife"] });
 
-const data = findItem("AFTERLIFE")!;
+const trackData = data.value.Afterlife;
 </script>
 
 <template>
   <div>
-    <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
-    <FullCard :track=data class="frame" />
+    <img :src="trackData.backgroundURL ? trackData.backgroundURL : trackData.coverURL"
+        alt="Album cover"
+        class="background object-cover w-full h-full">
+    <FullCard :track=trackData class="frame" />
   </div>
 </template>
 

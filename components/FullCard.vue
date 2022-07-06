@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { pageOptions } from "../utils/typings";
-import Button          from "../components/Button.vue";
+import { pageOptions } from "~/utils/typings";
 
 const props = defineProps<{
   track: pageOptions
@@ -14,7 +13,7 @@ const { backgroundColor, iconColor, buttonColor } = props.track;
     <img :src=track.coverURL alt="ALBUM COVER" class="w-full" />
     <div class="card">
       <div class="flex-shrink mx-auto col-span-full">
-        <h1 class="title font-black text-2xl">
+        <h1 class="title font-bold text-2xl">
           {{ track.title }}
         </h1>
         <h2 class="type font-light text-sm">
