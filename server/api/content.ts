@@ -11,7 +11,7 @@ export default defineEventHandler(() => {
 			iconColor:       "#4FC167",
 			coverURL:        "/images/forbidden-nights-cover.jpg",
 			backgroundURL:   "/images/forbidden-nights-background.jpg",
-			youtubeLink:     "https://www.youtube.com/watch?v=I5tRvBUD7hY",
+			youtubeLink:     "https://www.youtube.com/watch?v=M9TQXOQWWeg",
 			spotifyLink:     "https://open.spotify.com/album/73lP6GBHDPihFEITcWDRoF?si=e8EdyL25RzKyr79tofbUrg",
 			soundcloudLink:  "https://soundcloud.com/gmafiarecords/niek-forbidden-nights",
 			pagePath:        "/forbiddenNights",
