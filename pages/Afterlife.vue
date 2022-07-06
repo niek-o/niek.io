@@ -12,14 +12,13 @@ useHead({
     { name: "og:url", content: `${ "https://niek.space" + trackData.pagePath }` },
 
     { name: "theme-color", content: `${ trackData.buttonColor }` },
-    { name: "type", content: "photo" },
 
     { name: "twitter:title", content: `${ trackData.title }` },
-    // { name: "twitter:description", content: `${ trackData.title } OUT NOW` },
+    { name: "twitter:description", content: `${ trackData.title } OUT NOW` },
     { name: "twitter:domain", content: "https://niek.space/" },
     { name: "twitter:url", content: `${ "https://niek.space" + trackData.pagePath }` },
     { name: "twitter:image", content: `${ "https://niek.space" + trackData.coverURL }` },
-    { name: "twitter:card", content: `${ "https://niek.space" + trackData.coverURL }` },
+    { name: "twitter:card", content: "summary_large_image" },
   ]
 });
 </script>
