@@ -2,6 +2,16 @@
 const { data } = await useFetch("/api/content", { pick: ["Afterlife"] });
 
 const trackData = data.value.Afterlife;
+
+useMeta({
+  title: trackData.title,
+  og: {
+    title: trackData.title,
+    type: "website",
+    image: trackData.coverURL,
+    url: "http://niek.space" + trackData.pagePath
+  }
+})
 </script>
 
 <template>
