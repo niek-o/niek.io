@@ -3,15 +3,24 @@ const { data } = await useFetch("/api/content", { pick: ["Afterlife"] });
 
 const trackData = data.value.Afterlife;
 
-useMeta({
-  title: trackData.title,
-  og: {
-    title: trackData.title,
-    type: "website",
-    image: "https://niek.space" + trackData.coverURL,
-    url: "https://niek.space" + trackData.pagePath
-  }
-})
+// useMeta({
+//   title: trackData.title,
+//   og: {
+//     title: trackData.title,
+//     type: "website",
+//     image: "https://niek.space" + trackData.coverURL,
+//     url: "https://niek.space" + trackData.pagePath
+//   }
+// })
+
+useHead({
+  meta: [
+    { name: "title", content: `${ trackData.title }` },
+    { name: "og:title", content: `${ trackData.title }` },
+    { name: "og:image", content: `"https://niek.space" + ${ trackData.coverURL }` },
+    { name: "og:url", content: `"https://niek.space" + ${ trackData.pagePath }` }
+  ]
+});
 </script>
 
 <template>
