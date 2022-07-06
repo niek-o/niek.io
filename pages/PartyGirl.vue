@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import FullCard     from "../components/FullCard.vue";
-import { findItem } from "../utils/content";
+import { findItem } from "~/utils/content";
 
-const data = findItem("Geoxor - Kill Aura (Niek Edit)")!;
+const data = findItem("PARTY GIRL")!;
 </script>
 
 <template>
-  <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
-  <FullCard :track=data class="frame" />
+  <div>
+    <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
+    <FullCard :track=data class="frame" />
+  </div>
 </template>
 
 <style scoped>

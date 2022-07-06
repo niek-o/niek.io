@@ -9,7 +9,7 @@ const { backgroundColor, iconColor } = props.track;
 </script>
 
 <template>
-  <router-link :to=track.pagePath class="frame">
+  <NuxtLink :to=track.pagePath class="frame">
     <img :src=track.coverURL alt="ALBUM COVER" class="w-full" />
     <div class="card">
       <div class="flex-shrink mx-auto w-11/12">
@@ -21,7 +21,7 @@ const { backgroundColor, iconColor } = props.track;
         </h2>
       </div>
     </div>
-  </router-link>
+  </NuxtLink>
 </template>
 
 <style scoped>

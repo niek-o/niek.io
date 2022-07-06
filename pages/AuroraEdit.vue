@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import FullCard     from "../components/FullCard.vue";
-import { findItem } from "../utils/content";
+import { findItem } from "~/utils/content";
 
-const data = findItem("Hatsune Miku - World Is Mine (Geoxor Remix) [Niek Edit]")!;
+const data = findItem("Geoxor - Aurora (Niek Edit)")!;
 </script>
 
 <template>
-  <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
-  <FullCard :track=data class="frame" />
+  <div>
+    <img :src=data.coverURL alt="Album cover" class="background object-cover w-full h-full">
+    <FullCard :track=data class="frame" />
+  </div>
 </template>
 
 <style scoped>

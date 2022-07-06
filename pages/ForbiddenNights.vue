@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import FullCard     from "../components/FullCard.vue";
-import { findItem } from "../utils/content";
+import { findItem } from "~/utils/content";
 
-const data = findItem("HOLD ME NOW")!;
+const data = findItem("FORBIDDEN NIGHTS")!;
 </script>
 
 <template>
-  <img src="/images/hold-me-now-background.jpg" alt="Album cover" class="background object-cover w-full h-full">
-  <FullCard :track=data class="frame" />
+  <div>
+    <img src="/images/forbidden-nights-background.jpg" alt="Album cover" class="background object-cover w-full h-full">
+    <FullCard :track=data class="frame" />
+  </div>
 </template>
 
 <style scoped>
