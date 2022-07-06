@@ -2,7 +2,7 @@ import { defineEventHandler } from "h3";
 
 export default defineEventHandler(() => {
 	return {
-		ForbiddenNights: {
+		forbiddennights: {
 			title:           "FORBIDDEN NIGHTS",
 			releaseType:     "SINGLE",
 			buttonColor:     "#4FC167",
@@ -14,9 +14,9 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=M9TQXOQWWeg",
 			spotifyLink:     "https://open.spotify.com/album/73lP6GBHDPihFEITcWDRoF?si=e8EdyL25RzKyr79tofbUrg",
 			soundcloudLink:  "https://soundcloud.com/gmafiarecords/niek-forbidden-nights",
-			pagePath:        "/forbiddenNights",
+			pagePath:        "/forbiddennights",
 		},
-		KillAuraEdit:    {
+		killauraedit:    {
 			title:           "Geoxor - Kill Aura (Niek Edit)",
 			releaseType:     "EDIT",
 			buttonColor:     "#FFFFFF",
@@ -27,7 +27,7 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=4XTAtu-fh7o",
 			pagePath:        "/killauraedit",
 		},
-		Nightmare:       {
+		nightmare:       {
 			title:           "NIGHTMARE",
 			releaseType:     "SINGLE",
 			buttonColor:     "#A90000",
@@ -40,7 +40,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/niek_o/nightmare",
 			pagePath:        "/nightmare",
 		},
-		HoldMeNow:       {
+		holdmenow:       {
 			title:           "HOLD ME NOW",
 			releaseType:     "SINGLE",
 			buttonColor:     "#FF0000",
@@ -54,7 +54,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/gmafiarecords/niek-hold-me-now-original-mix",
 			pagePath:        "/holdmenow",
 		},
-		AuroraEdit:      {
+		auroraedit:      {
 			title:           "Geoxor - Aurora (Niek Edit)",
 			releaseType:     "EDIT",
 			buttonColor:     "#7C67A6",
@@ -65,7 +65,7 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=Bww_cOc51XQ",
 			pagePath:        "/auroraedit",
 		},
-		MikuRemix:       {
+		mikuremix:       {
 			title:           "Hatsune Miku - World Is Mine (Geoxor Remix) [Niek Edit]",
 			releaseType:     "EDIT",
 			buttonColor:     "#90D8F6",
@@ -76,7 +76,7 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=Xqptytq79nQ",
 			pagePath:        "/mikuremix",
 		},
-		Afterlife:       {
+		afterlife:       {
 			title:           "AFTERLIFE",
 			releaseType:     "SINGLE",
 			buttonColor:     "#3268C2",
@@ -89,7 +89,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/niek_o/afterlife-full",
 			pagePath:        "/afterlife",
 		},
-		PartyGirl:       {
+		partygirl:       {
 			title:           "PARTY GIRL",
 			releaseType:     "EP",
 			buttonColor:     "#0D202B",
@@ -102,7 +102,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/niek_o/sets/party-girl",
 			pagePath:        "/partygirl",
 		},
-		TheUniverse:     {
+		theuniverse:     {
 			title:           "THE UNIVERSE",
 			releaseType:     "ALBUM",
 			buttonColor:     "#D13B3B",

@@ -1,7 +1,17 @@
 <script setup lang="ts">
-const { data } = await useFetch("/api/content", { pick: ["Nightmare"] });
 
-const trackData = data.value.Nightmare;
+const route  = useRoute();
+const router = useRouter();
+
+const name = <string>route.params.track;
+
+const { data } = await useFetch("/api/content");
+
+if (!data.value[name]) {
+  router.push("/");
+}
+
+const trackData = data.value[name];
 
 useHead({
   title: trackData.title,
