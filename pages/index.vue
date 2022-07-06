@@ -1,5 +1,24 @@
 <script setup lang="ts">
-const {data} = await useFetch("/api/content")
+const { data } = await useFetch("/api/content");
+
+useHead({
+  title: "NIEK",
+  meta:  [
+    { name: "og:title", content: "NIEK" },
+    { name: "og:description", content: "FORBIDDEN NIGHTS OUT NOW" },
+    { name: "og:image", content: "https://niek.space/images/logo.png" },
+    { name: "og:url", content: "https://niek.space" },
+
+    { name: "theme-color", content: "#2587FB" },
+
+    { name: "twitter:title", content: "NIEK" },
+    { name: "twitter:description", content: "FORBIDDEN NIGHTS OUT NOW" },
+    { name: "twitter:domain", content: "https://niek.space/" },
+    { name: "twitter:url", content: "https://niek.space" },
+    { name: "twitter:image", content: "https://niek.space/images/logo.png" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ]
+});
 </script>
 
 <template>
