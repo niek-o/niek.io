@@ -10,7 +10,7 @@ export default defineEventHandler(() => {
 			backgroundColor: "#141414",
 			iconColor:       "#FFFFFF",
 			coverURL:        "/images/the-reason-cover.jpg",
-			youtubeLink:     "https://www.youtube.com/watch?v=baovwmd0FRc",
+			youtubeLink:     "https://www.youtube.com/watch?v=9EFf3XLFkdc",
 			spotifyLink:     "https://open.spotify.com/album/1TKLYKxIimWks7mIH6JpR8?si=Vp0DURJpS8qk-AA7zaefIA",
 			soundcloudLink:  "https://soundcloud.com/niek_o/the-reason",
 			pagePath:        "/thereason",
