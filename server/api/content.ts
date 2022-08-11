@@ -2,6 +2,19 @@ import { defineEventHandler } from "h3";
 
 export default defineEventHandler(() => {
 	return {
+		thereason: {
+			title:           "THE REASON",
+			releaseType:     "SINGLE",
+			buttonColor:     "#493f31",
+			buttonTextColor: "#FFFFFF",
+			backgroundColor: "#141414",
+			iconColor:       "#FFFFFF",
+			coverURL:        "/images/the-reason-cover.jpg",
+			youtubeLink:     "https://www.youtube.com/watch?v=baovwmd0FRc",
+			spotifyLink:     "https://open.spotify.com/album/1TKLYKxIimWks7mIH6JpR8?si=Vp0DURJpS8qk-AA7zaefIA",
+			soundcloudLink:  "https://soundcloud.com/niek_o/the-reason",
+			pagePath:        "/thereason",
+		},
 		forbiddennights: {
 			title:           "FORBIDDEN NIGHTS",
 			releaseType:     "SINGLE",
