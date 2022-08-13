@@ -2,10 +2,10 @@ import { defineEventHandler } from "h3";
 
 export default defineEventHandler(() => {
 	return {
-		thereason: {
+		thereason:       {
 			title:           "THE REASON",
 			releaseType:     "SINGLE",
-			buttonColor:     "#493f31",
+			buttonColor:     "#493F31",
 			buttonTextColor: "#FFFFFF",
 			backgroundColor: "#141414",
 			iconColor:       "#FFFFFF",

@@ -12,4 +12,14 @@ export type pageOptions = {
 	pagePath: string;
 };
 
-type releaseType = "SINGLE" | "EP" | "ALBUM" | "REMIX" | "EDIT";
+type releaseType =
+	"SINGLE"
+	| "EP"
+	| "ALBUM"
+	| "REMIX"
+	| "EDIT";
+
+export type platform =
+	"youtube"
+	| "soundcloud"
+	| "spotify";

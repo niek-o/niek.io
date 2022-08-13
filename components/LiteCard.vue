@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {unref as _unref} from 'vue';
 import { pageOptions } from "../utils/typings";
 
 const props = defineProps<{
@@ -10,14 +9,14 @@ const { backgroundColor, iconColor } = props.track;
 </script>
 
 <template>
-  <NuxtLink :to=track.pagePath class="frame">
+  <NuxtLink :to=track.pagePath class="max-w-full w-homecard mt-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
     <img :src=track.coverURL alt="ALBUM COVER" class="w-full" />
-    <div class="card">
+    <div class="card grid grid-cols-1 justify-items-stretch items-center w-full h-22">
       <div class="flex-shrink mx-auto w-11/12">
-        <h1 class="title font-bold text-2xl">
+        <h1 class="title w-auto text-center font-bold text-2xl">
           {{ track.title }}
         </h1>
-        <h2 class="type font-light text-sm">
+        <h2 class="type w-auto text-center font-light text-sm">
           {{ track.releaseType }}
         </h2>
       </div>
@@ -28,15 +27,9 @@ const { backgroundColor, iconColor } = props.track;
 <style scoped>
 .card {
   background-color: v-bind(backgroundColor);
-  @apply grid grid-cols-1 justify-items-stretch items-center w-full h-22
 }
 
 .title, .type {
   color: v-bind(iconColor);
-  @apply w-auto text-center
-}
-
-.frame {
-  @apply max-w-full w-homecard mt-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden
 }
 </style>

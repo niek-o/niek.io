@@ -14,16 +14,16 @@ if (!data.value[name]) {
 const trackData = data.value[name];
 
 useHead({
-  title: trackData.title,
+  title: `NIEK | ${ trackData.title }`,
   meta:  [
-    { name: "og:title", content: `${ trackData.title }` },
+    { name: "og:title", content: `NIEK | ${ trackData.title }` },
     { name: "og:description", content: `${ trackData.title } OUT NOW` },
     { name: "og:image", content: `${ "https://niek.space" + trackData.coverURL }` },
     { name: "og:url", content: `${ "https://niek.space" + trackData.pagePath }` },
 
     { name: "theme-color", content: `${ trackData.buttonColor }` },
 
-    { name: "twitter:title", content: `${ trackData.title }` },
+    { name: "twitter:title", content: `NIEK | ${ trackData.title }` },
     { name: "twitter:description", content: `${ trackData.title } OUT NOW` },
     { name: "twitter:domain", content: "https://niek.space/" },
     { name: "twitter:url", content: `${ "https://niek.space" + trackData.pagePath }` },
