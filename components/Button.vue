@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {unref as _unref} from 'vue';
 
 defineProps<{
   url: string,
