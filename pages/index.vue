@@ -49,7 +49,7 @@ useHead({
         </a>
       </div>
     </div>
-    <div class="grid home place-items-center">
+    <div class="grid home place-items-center my-12 gap-y-12">
       <LiteCard v-for="item in data" :track=item />
     </div>
   </div>

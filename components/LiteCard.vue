@@ -10,7 +10,7 @@ const { backgroundColor, iconColor } = props.track;
 </script>
 
 <template>
-  <NuxtLink :to=track.pagePath class="max-w-full w-homecard mt-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
+  <NuxtLink :to=track.pagePath class="max-w-full w-homecard flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
     <img :src=track.coverURL alt="ALBUM COVER" class="w-full" />
     <div class="card grid grid-cols-1 justify-items-stretch items-center w-full h-22">
       <div class="flex-shrink mx-auto w-11/12">
