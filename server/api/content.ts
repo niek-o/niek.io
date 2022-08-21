@@ -2,7 +2,7 @@ import { defineEventHandler } from "h3";
 
 export default defineEventHandler(() => {
 	return {
-		thereason:       {
+		"the-reason":       {
 			title:           "THE REASON",
 			releaseType:     "SINGLE",
 			buttonColor:     "#493F31",
@@ -13,9 +13,9 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=W96QqVgn_90",
 			spotifyLink:     "https://open.spotify.com/album/1TKLYKxIimWks7mIH6JpR8?si=Vp0DURJpS8qk-AA7zaefIA",
 			soundcloudLink:  "https://soundcloud.com/niek_o/the-reason",
-			pagePath:        "/thereason",
+			pagePath:        "/the-reason",
 		},
-		forbiddennights: {
+		"forbidden-nights": {
 			title:           "FORBIDDEN NIGHTS",
 			releaseType:     "SINGLE",
 			buttonColor:     "#4FC167",
@@ -27,9 +27,9 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=oe6G8w8nBa0",
 			spotifyLink:     "https://open.spotify.com/album/73lP6GBHDPihFEITcWDRoF?si=e8EdyL25RzKyr79tofbUrg",
 			soundcloudLink:  "https://soundcloud.com/gmafiarecords/niek-forbidden-nights",
-			pagePath:        "/forbiddennights",
+			pagePath:        "/forbidden-nights",
 		},
-		killauraedit:    {
+		"killauraedit":    {
 			title:           "Geoxor - Kill Aura (Niek Edit)",
 			releaseType:     "EDIT",
 			buttonColor:     "#FFFFFF",
@@ -40,7 +40,7 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=4XTAtu-fh7o",
 			pagePath:        "/killauraedit",
 		},
-		nightmare:       {
+		"nightmare":       {
 			title:           "NIGHTMARE",
 			releaseType:     "SINGLE",
 			buttonColor:     "#A90000",
@@ -53,7 +53,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/niek_o/nightmare",
 			pagePath:        "/nightmare",
 		},
-		holdmenow:       {
+		"hold-me-now":       {
 			title:           "HOLD ME NOW",
 			releaseType:     "SINGLE",
 			buttonColor:     "#FF0000",
@@ -65,9 +65,9 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=PVvxr3YJdNM",
 			spotifyLink:     "https://open.spotify.com/album/5JKLq88LAWkYA1LZtRmBvf?si=m7mF_81PQYe2nbdpkeNerA",
 			soundcloudLink:  "https://soundcloud.com/gmafiarecords/niek-hold-me-now-original-mix",
-			pagePath:        "/holdmenow",
+			pagePath:        "/hold-me-now",
 		},
-		auroraedit:      {
+		"auroraedit":      {
 			title:           "Geoxor - Aurora (Niek Edit)",
 			releaseType:     "EDIT",
 			buttonColor:     "#7C67A6",
@@ -78,7 +78,7 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=Bww_cOc51XQ",
 			pagePath:        "/auroraedit",
 		},
-		mikuremix:       {
+		"mikuremix":       {
 			title:           "Hatsune Miku - World Is Mine (Geoxor Remix) [Niek Edit]",
 			releaseType:     "EDIT",
 			buttonColor:     "#90D8F6",
@@ -89,7 +89,7 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=Xqptytq79nQ",
 			pagePath:        "/mikuremix",
 		},
-		afterlife:       {
+		"afterlife":       {
 			title:           "AFTERLIFE",
 			releaseType:     "SINGLE",
 			buttonColor:     "#3268C2",
@@ -102,7 +102,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/niek_o/afterlife-full",
 			pagePath:        "/afterlife",
 		},
-		partygirl:       {
+		"party-girl":       {
 			title:           "PARTY GIRL",
 			releaseType:     "EP",
 			buttonColor:     "#0D202B",
@@ -113,9 +113,9 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=vwRuZuPILL0&list=PL41zV4hHhDYYe2ZSrK9eC2uIVV_tmodGL",
 			spotifyLink:     "https://open.spotify.com/album/4zm0HzCLKT7XJO8bAz29P5?si=wlqJ6lHOTku8arx2Z8dmWQ",
 			soundcloudLink:  "https://soundcloud.com/niek_o/sets/party-girl",
-			pagePath:        "/partygirl",
+			pagePath:        "/party-girl",
 		},
-		theuniverse:     {
+		"the-universe":     {
 			title:           "THE UNIVERSE",
 			releaseType:     "ALBUM",
 			buttonColor:     "#D13B3B",
@@ -126,7 +126,7 @@ export default defineEventHandler(() => {
 			youtubeLink:     "https://www.youtube.com/watch?v=iSjcrdLrD2k&list=PL41zV4hHhDYZQ13NT6PdggpKWDquDUzyt",
 			spotifyLink:     "https://open.spotify.com/album/2lj7IEMCthtOMSGiD5ooBQ?si=17WS8oihRNSk6bqMVBxtHg",
 			soundcloudLink:  "https://soundcloud.com/niek_o/sets/the-universe",
-			pagePath:        "/theuniverse",
+			pagePath:        "/the-universe",
 		},
 	};
 });
