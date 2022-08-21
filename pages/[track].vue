@@ -18,16 +18,16 @@ useHead({
   meta:  [
     { name: "og:title", content: `NIEK | ${ trackData.title }` },
     { name: "og:description", content: `${ trackData.title } OUT NOW` },
-    { name: "og:image", content: `${ "https://niek.space" + trackData.coverURL }` },
-    { name: "og:url", content: `${ "https://niek.space" + trackData.pagePath }` },
+    { name: "og:image", content: `${ "https://niek.io" + trackData.coverURL }` },
+    { name: "og:url", content: `${ "https://niek.io" + trackData.pagePath }` },
 
     { name: "theme-color", content: `${ trackData.buttonColor }` },
 
     { name: "twitter:title", content: `NIEK | ${ trackData.title }` },
     { name: "twitter:description", content: `${ trackData.title } OUT NOW` },
-    { name: "twitter:domain", content: "https://niek.space/" },
-    { name: "twitter:url", content: `${ "https://niek.space" + trackData.pagePath }` },
-    { name: "twitter:image", content: `${ "https://niek.space" + trackData.coverURL }` },
+    { name: "twitter:domain", content: "https://niek.io/" },
+    { name: "twitter:url", content: `${ "https://niek.io" + trackData.pagePath }` },
+    { name: "twitter:image", content: `${ "https://niek.io" + trackData.coverURL }` },
     { name: "twitter:card", content: "summary_large_image" },
   ]
 });

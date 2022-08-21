@@ -6,16 +6,16 @@ useHead({
   meta:  [
     { name: "og:title", content: "NIEK" },
     { name: "og:description", content: `${ data.value[Object.keys(data.value)[0]].title } OUT NOW` },
-    { name: "og:image", content: "https://niek.space/images/logo.png" },
-    { name: "og:url", content: "https://niek.space" },
+    { name: "og:image", content: "https://niek.io/images/logo.png" },
+    { name: "og:url", content: "https://niek.io" },
 
     { name: "theme-color", content: "#2587FB" },
 
     { name: "twitter:title", content: "NIEK" },
     { name: "twitter:description", content: `${ data.value[Object.keys(data.value)[0]].title } OUT NOW` },
-    { name: "twitter:domain", content: "https://niek.space/" },
-    { name: "twitter:url", content: "https://niek.space" },
-    { name: "twitter:image", content: "https://niek.space/images/logo.png" },
+    { name: "twitter:domain", content: "https://niek.io/" },
+    { name: "twitter:url", content: "https://niek.io" },
+    { name: "twitter:image", content: "https://niek.io/images/logo.png" },
   ]
 });
 </script>
