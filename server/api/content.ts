@@ -29,18 +29,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/gmafiarecords/niek-forbidden-nights",
 			pagePath:        "/forbidden-nights",
 		},
-		"killauraedit":    {
-			title:           "Geoxor - Kill Aura (Niek Edit)",
-			releaseType:     "EDIT",
-			buttonColor:     "#FFFFFF",
-			buttonTextColor: "#52A5CB",
-			backgroundColor: "#52A5CB",
-			iconColor:       "#FFFFFF",
-			coverURL:        "/images/kill-aura-edit-cover.jpg",
-			youtubeLink:     "https://www.youtube.com/watch?v=4XTAtu-fh7o",
-			pagePath:        "/killauraedit",
-		},
-		"nightmare":       {
+		"nightmare":        {
 			title:           "NIGHTMARE",
 			releaseType:     "SINGLE",
 			buttonColor:     "#A90000",
@@ -53,7 +42,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/niek_o/nightmare",
 			pagePath:        "/nightmare",
 		},
-		"hold-me-now":       {
+		"hold-me-now":      {
 			title:           "HOLD ME NOW",
 			releaseType:     "SINGLE",
 			buttonColor:     "#FF0000",
@@ -67,29 +56,7 @@ export default defineEventHandler(() => {
 			soundcloudLink:  "https://soundcloud.com/gmafiarecords/niek-hold-me-now-original-mix",
 			pagePath:        "/hold-me-now",
 		},
-		"auroraedit":      {
-			title:           "Geoxor - Aurora (Niek Edit)",
-			releaseType:     "EDIT",
-			buttonColor:     "#7C67A6",
-			buttonTextColor: "#FFFFFF",
-			backgroundColor: "#FFFFFF",
-			iconColor:       "#7C67A6",
-			coverURL:        "/images/aurora-edit-cover.jpg",
-			youtubeLink:     "https://www.youtube.com/watch?v=Bww_cOc51XQ",
-			pagePath:        "/auroraedit",
-		},
-		"mikuremix":       {
-			title:           "Hatsune Miku - World Is Mine (Geoxor Remix) [Niek Edit]",
-			releaseType:     "EDIT",
-			buttonColor:     "#90D8F6",
-			buttonTextColor: "#FFFFFF",
-			backgroundColor: "#FFFFFF",
-			iconColor:       "#90D8F6",
-			coverURL:        "/images/miku-remix-cover.jpg",
-			youtubeLink:     "https://www.youtube.com/watch?v=Xqptytq79nQ",
-			pagePath:        "/mikuremix",
-		},
-		"afterlife":       {
+		"afterlife":        {
 			title:           "AFTERLIFE",
 			releaseType:     "SINGLE",
 			buttonColor:     "#3268C2",
