@@ -36,9 +36,8 @@ useHead({
 <template>
   <div>
     <nuxt-img
-        quality="50"
-        width="2048px"
-        height="2048px"
+        width="1024px"
+        height="1024px"
         :src="trackData.backgroundURL ? trackData.backgroundURL : trackData.coverURL"
         alt="Album cover"
         class="background object-cover w-full h-full" />

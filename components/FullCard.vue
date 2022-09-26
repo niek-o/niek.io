@@ -12,8 +12,9 @@ const { backgroundColor, iconColor } = props.track;
 <template>
   <div class="frame mb-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
     <nuxt-img
-        width="2048px"
-        height="2048px" :src=track.coverURL
+        width="1024px"
+        height="1024px"
+        :src=track.coverURL
         alt="ALBUM COVER"
         class="w-full" />
     <div class="card grid grid-cols-2 justify-items-stretch items-center w-full h-22">
