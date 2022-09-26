@@ -35,7 +35,11 @@ useHead({
 
 <template>
   <div>
-    <nuxt-img format="webp" quality="50" width="2048px" height="2048px" :src="trackData.backgroundURL ? trackData.backgroundURL : trackData.coverURL"
+    <nuxt-img
+        quality="50"
+        width="2048px"
+        height="2048px"
+        :src="trackData.backgroundURL ? trackData.backgroundURL : trackData.coverURL"
         alt="Album cover"
         class="background object-cover w-full h-full" />
     <FullCard :track=trackData class="frame" />

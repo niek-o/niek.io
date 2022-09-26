@@ -23,7 +23,12 @@ useHead({
 <template>
   <div>
     <div class="top-bar w-full h-full bg-black drop-shadow-lg grid items-center">
-      <nuxt-img src="/images/logo.png" alt="NIEK LOGO" class="flex flex-row flex-shrink justify-self-start ml-5 w-24" />
+      <nuxt-img
+          width="100px"
+          height="100px"
+          src="/images/logo.png"
+          alt="NIEK LOGO"
+          class="flex flex-row flex-shrink justify-self-start ml-5 w-24" />
       <div class="flex flex-row flex-shrink justify-self-end mr-5">
         <a href="https://www.youtube.com/c/Frankenstein795" target="_blank">
           <svg class="icon w-12 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -5 24 24" width="24">

@@ -11,7 +11,7 @@ const { backgroundColor, iconColor } = props.track;
 
 <template>
   <NuxtLink :to=track.pagePath class="max-w-full w-homecard flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
-    <nuxt-img format="webp"
+    <nuxt-img
         quality="50"
         width="2048px"
         height="2048px"
