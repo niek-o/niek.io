@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {unref as _unref} from 'vue';
+import { unref as _unref } from "vue";
 
 defineProps<{
   url: string,
@@ -20,8 +20,8 @@ defineProps<{
 
 <style scoped>
 .button {
-  border-radius: 12px;
+  border-radius:    12px;
   background-color: v-bind(backgroundColor);
-  color: v-bind(textColor);
+  color:            v-bind(textColor);
 }
 </style>
