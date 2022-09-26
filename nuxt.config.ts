@@ -6,5 +6,8 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		"@nuxt/image-edge"
 	],
-	css:     ["~/assets/css/main.css"]
+	css:     ["~/assets/css/main.css"],
+	image: {
+		provider: "netlify"
+	}
 });
