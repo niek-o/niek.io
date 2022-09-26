@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { pageOptions } from "~/utils/typings";
-import {unref as _unref} from 'vue';
+import { pageOptions }     from "~/utils/typings";
+import { unref as _unref } from "vue";
 
 const props = defineProps<{
   track: pageOptions
@@ -11,7 +11,12 @@ const { backgroundColor, iconColor } = props.track;
 
 <template>
   <div class="frame mb-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
-    <img :src=track.coverURL alt="ALBUM COVER" class="w-full" />
+    <nuxt-img
+        width="1024px"
+        height="1024px"
+        :src=track.coverURL
+        alt="ALBUM COVER"
+        class="w-full" />
     <div class="card grid grid-cols-2 justify-items-stretch items-center w-full h-22">
       <div class="flex-shrink mx-auto col-span-full">
         <h1 class="title w-full text-center font-bold text-2xl">

@@ -35,9 +35,12 @@ useHead({
 
 <template>
   <div>
-    <img :src="trackData.backgroundURL ? trackData.backgroundURL : trackData.coverURL"
+    <nuxt-img
+        width="1024px"
+        height="1024px"
+        :src="trackData.backgroundURL ? trackData.backgroundURL : trackData.coverURL"
         alt="Album cover"
-        class="background object-cover w-full h-full">
+        class="background object-cover w-full h-full" />
     <FullCard :track=trackData class="frame" />
   </div>
 </template>
@@ -48,7 +51,7 @@ useHead({
   position:                fixed;
   filter:                  blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  transform:               scale(1.2);
+  transform:               scale(1.25);
 }
 
 @media screen and (min-width: 600px) {
