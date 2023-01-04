@@ -23,7 +23,7 @@ const { backgroundColor, iconColor } = props.track;
           {{ track.title }}
         </h1>
         <h2 class="type w-auto text-center font-light text-sm">
-          {{ track.releaseType }}
+          {{ track.subtitle }}
         </h2>
       </div>
     </div>
