@@ -6,13 +6,13 @@ const router = useRouter();
 
 const name = <string>route.params.track;
 
-const { data } = await useFetch("/api/content");
+const req = await useFetch(`/api/songs?song=${name}`);
 
-if (!data.value[name]) {
+if (!req.data.value) {
   router.push("/");
 }
 
-const trackData: pageOptions = data.value[name];
+const trackData = <pageOptions>req.data.value;
 
 useHead({
   title: `NIEK | ${trackData.title}`,
