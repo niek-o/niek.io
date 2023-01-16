@@ -5,6 +5,8 @@ module.exports = {
 			spacing: {
 				22: "5.5rem",
 				homecard: "22rem",
+				maincard: "30rem",
+				maincard_mobile: "90vw"
 			},
 		},
 	},

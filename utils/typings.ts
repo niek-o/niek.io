@@ -6,9 +6,8 @@ export type pageOptions = {
     backgroundColor: string;
     iconColor: string;
     coverURL: string;
-    youtubeLink?: string;
-    soundcloudLink?: string;
-    spotifyLink?: string;
+    backgroundURL?: string;
+    links: Array<trackLink>
     pagePath: string;
 };
 
@@ -23,3 +22,8 @@ export type platform =
     "youtube"
     | "soundcloud"
     | "spotify";
+
+export type trackLink = {
+    url: string,
+    platform: platform
+}

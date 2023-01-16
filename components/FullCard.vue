@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { pageOptions }     from "~/utils/typings";
+import { pageOptions } from "~/utils/typings";
 import { unref as _unref } from "vue";
 
 const props = defineProps<{
@@ -10,13 +10,14 @@ const { backgroundColor, iconColor } = props.track;
 </script>
 
 <template>
-  <div class="frame mb-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden">
+  <div class="frame mb-12 flex flex-col rounded-2xl drop-shadow-lg overflow-hidden
+              w-maincard_mobile mx-auto sm:ml-20 sm:mt-20 sm:w-maincard">
     <nuxt-img
         width="1024px"
         height="1024px"
         :src=track.coverURL
         alt="ALBUM COVER"
-        class="w-full" />
+        class="w-full"/>
     <div class="card grid grid-cols-2 justify-items-stretch items-center w-full h-22">
       <div class="flex-shrink mx-auto col-span-full">
         <h1 class="title w-full text-center font-bold text-2xl">
@@ -27,35 +28,13 @@ const { backgroundColor, iconColor } = props.track;
         </h2>
       </div>
     </div>
-    <div v-if=track.youtubeLink>
-      <CardElement :track=track type="youtube" />
-    </div>
-    <div v-if=track.spotifyLink>
-      <CardElement :track=track type="spotify" />
-    </div>
-    <div v-if=track.soundcloudLink>
-      <CardElement :track=track type="soundcloud" />
+    <div v-for="link in track.links">
+      <CardElement :track=track :link="link"/>
     </div>
   </div>
 </template>
 
 <style scoped>
-@media screen and (min-width: 600px) {
-  .frame {
-    margin-left: 5rem;
-    margin-top:  5rem;
-    width:       30rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .frame {
-    width:        90vw;
-    margin-left:  auto;
-    margin-right: auto;
-  }
-}
-
 .card {
   background-color: v-bind(backgroundColor);
 }
