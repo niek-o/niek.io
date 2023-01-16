@@ -1,11 +1,8 @@
 import { defineEventHandler } from "h3";
 import { pageOptions } from "~/utils/typings";
 
-export default defineEventHandler((event): pageOptions | Record<string, pageOptions> => {
-    const query = getQuery(event)
-    const song = query.song as string
-
-    const songs: Record<string, pageOptions> = {
+export default defineEventHandler((): Record<string, pageOptions> => {
+    return {
         "rumble-flip": {
             title: "RUMBLE [NIEK D&B FLIP]",
             subtitle: "SKRILLEX, FRED AGAIN.. & FLOWDAN",
@@ -196,7 +193,5 @@ export default defineEventHandler((event): pageOptions | Record<string, pageOpti
             ],
             pagePath: "/the-universe"
         }
-    }
-
-    return song ? songs[song] : songs
+    };
 });

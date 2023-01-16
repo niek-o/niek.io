@@ -5,17 +5,17 @@ useHead({
   title: "NIEK",
   meta: [
     { name: "og:title", content: "NIEK" },
-    { name: "og:description", content: `${data.value[Object.keys(data.value)[0]].title} OUT NOW` },
+    { name: "og:description", content: `${ data.value[Object.keys(data.value)[0]].title } OUT NOW` },
     { name: "og:image", content: "https://niek.io/images/logo.png" },
     { name: "og:url", content: "https://niek.io" },
 
     { name: "theme-color", content: "#2587FB" },
 
     { name: "twitter:title", content: "NIEK" },
-    { name: "twitter:description", content: `${data.value[Object.keys(data.value)[0]].title} OUT NOW` },
+    { name: "twitter:description", content: `${ data.value[Object.keys(data.value)[0]].title } OUT NOW` },
     { name: "twitter:domain", content: "https://niek.io/" },
     { name: "twitter:url", content: "https://niek.io" },
-    { name: "twitter:image", content: "https://niek.io/images/logo.png" },
+    { name: "twitter:image", content: "https://niek.io/images/logo.png" }
   ]
 });
 </script>
@@ -28,18 +28,26 @@ useHead({
           height="100px"
           src="/images/logo.png"
           alt="NIEK LOGO"
-          class="flex flex-row flex-shrink justify-self-start ml-5 w-24 ease-in-out duration-100 sm:hover:scale-105"/>
+          class="flex flex-row flex-shrink justify-self-start ml-5 w-24 ease-in-out duration-100 sm:hover:scale-105 non-drag"/>
       <div class="flex flex-row flex-shrink justify-self-end mr-5">
-        <a href="https://www.youtube.com/c/Frankenstein795" target="_blank">
+        <a href="https://www.youtube.com/c/Frankenstein795"
+           target="_blank"
+           class="non-drag">
           <IconsYouTube class="fill-white w-12 mr-1 ease-in-out duration-100 sm:hover:scale-105"/>
         </a>
-        <a href="https://open.spotify.com/artist/6PXPX1pIxajf1IpgMOJjYS?si=UPzRRIrJT5WpYKp1eWRQcg" target="_blank">
+        <a href="https://open.spotify.com/artist/6PXPX1pIxajf1IpgMOJjYS?si=UPzRRIrJT5WpYKp1eWRQcg"
+           target="_blank"
+           class="non-drag">
           <IconsSpotify class="fill-white w-12 mr-1 ease-in-out duration-100 sm:hover:scale-105"/>
         </a>
-        <a href="https://soundcloud.com/niek_o" target="_blank">
+        <a href="https://soundcloud.com/niek_o"
+           target="_blank"
+           class="non-drag">
           <IconsSoundCloud class="fill-white w-12 mr-1 ease-in-out duration-100 sm:hover:scale-105"/>
         </a>
-        <a href="https://www.instagram.com/official.niek" target="_blank">
+        <a href="https://www.instagram.com/official.niek"
+           target="_blank"
+           class="non-drag">
           <IconsInstagram class="fill-white w-12 mr-1 ease-in-out duration-100 sm:hover:scale-105"/>
         </a>
       </div>
@@ -49,7 +57,7 @@ useHead({
           v-for="track in data"
           :to=track.pagePath
           class="max-w-full w-homecard flex flex-col rounded-2xl drop-shadow-lg overflow-hidden
-                 ease-in-out duration-100 sm:hover:scale-105 sm:hover:drop-shadow-xl">
+                 ease-in-out duration-100 sm:hover:scale-105 sm:hover:shadow-xl non-drag">
         <LiteCard :track="track"/>
       </NuxtLink>
     </div>

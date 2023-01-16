@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { unref as _unref } from "vue";
 
 defineProps<{
   url: string,
@@ -7,7 +6,6 @@ defineProps<{
   backgroundColor: string,
   textColor: string,
 }>();
-
 </script>
 
 <template>

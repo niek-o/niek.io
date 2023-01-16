@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +10,3 @@
     <circle cx="15.156" cy="4.858" r="1.237"></circle>
   </svg>
 </template>
-
-<style scoped>
-</style>

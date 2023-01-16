@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { pageOptions, platform, trackLink } from "~/utils/typings";
-import { unref as _unref } from "vue";
+import { musicPlatform, pageOptions, trackLink } from "~/utils/typings";
 
 const props = defineProps<{
   track: pageOptions,
   link: trackLink
 }>();
 
-const buttonText: Record<platform, string> = {
+const buttonText: Record<musicPlatform, string> = {
   spotify: "STREAM",
   youtube: "WATCH",
   soundcloud: "STREAM"
-}
+};
 
 const { backgroundColor, iconColor, buttonColor } = props.track;
 </script>
@@ -26,7 +25,9 @@ const { backgroundColor, iconColor, buttonColor } = props.track;
         <Button :url="link.url"
                 :text="buttonText[link.platform]"
                 :background-color="track.buttonColor"
-                :text-color="track.buttonTextColor"/>
+                :text-color="track.buttonTextColor"
+                class="non-drag"
+        />
       </div>
       <div class="justify-self-end">
         <IconsYouTube class="icon flex-1 mx-10 m-2 h-14 w-auto" v-if="link.platform === 'youtube'"/>

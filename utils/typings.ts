@@ -18,12 +18,12 @@ type releaseType =
     | "REMIX"
     | "EDIT";
 
-export type platform =
+export type musicPlatform =
     "youtube"
     | "soundcloud"
     | "spotify";
 
 export type trackLink = {
     url: string,
-    platform: platform
+    platform: musicPlatform
 }
