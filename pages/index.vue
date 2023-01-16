@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = await useFetch("/api/content");
+const { data } = await useFetch("/api/songs");
 
 useHead({
   title: "NIEK",
