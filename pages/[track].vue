@@ -5,13 +5,15 @@ const router = useRouter();
 
 const name = <string>route.params.track;
 
-const { data } = await useFetch("/api/songs");
 
-if (!data.value || !data.value[name]) {
+const { data } = await useFetch(`/api/songs?song=${name}`);
+refreshNuxtData()
+
+if (!data.value) {
   router.push("/");
 }
 
-const trackData = data.value![name];
+const trackData = data.value!;
 
 useHead({
   title: `NIEK | ${ trackData.title }`,
