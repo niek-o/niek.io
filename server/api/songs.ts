@@ -6,6 +6,30 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
     const song = query.song as string;
 
     const songs: Record<string, pageOptions> = {
+        "liar": {
+            title: "LIAR",
+            subtitle: "SINGLE",
+            buttonColor: "#2B7CF8",
+            buttonTextColor: "#FFFFFF",
+            backgroundColor: "#000000",
+            iconColor: "#FFFFFF",
+            coverURL: "/images/liar-cover.jpg",
+            links: [
+                {
+                    url: "https://www.youtube.com/watch?v=mbohL7YQ8u0",
+                    platform: "youtube"
+                },
+                {
+                    url: "https://open.spotify.com/album/602b9w3nrY39vkC9J1ghlk?si=sVgUQHNQSQ-OY7zumh0O8Q",
+                    platform: "spotify"
+                },
+                {
+                    url: "https://soundcloud.com/niek_o/liar",
+                    platform: "soundcloud"
+                }
+            ],
+            pagePath: "/liar"
+        },
         "rumble-flip": {
             title: "RUMBLE [NIEK D&B FLIP]",
             subtitle: "SKRILLEX, FRED AGAIN.. & FLOWDAN",
