@@ -6,6 +6,46 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
     const song = query.song as string;
 
     const songs: Record<string, pageOptions> = {
+        "another-day": {
+            title: "ANOTHER DAY",
+            subtitle: "NIEK & LUWUC",
+            buttonColor: "#578196",
+            buttonTextColor: "#f3d6fc",
+            backgroundColor: "#1a1437",
+            iconColor: "#f1d4fa",
+            coverURL: "/images/another-day-cover.jpg",
+            links: [
+                {
+                    url: "https://www.youtube.com/watch?v=iq0C2pgGnrc",
+                    platform: "youtube"
+                },
+                {
+                    url: "https://open.spotify.com/track/7rauCEF41dYR63AfvypaKe",
+                    platform: "spotify"
+                }
+            ],
+            pagePath: "/another-day"
+        },
+        "night-tale-remix": {
+            title: "NIGHT TALE (NIEK REMIX)",
+            subtitle: "CHAWI",
+            buttonColor: "#f9b46f",
+            buttonTextColor: "#FFFFFF",
+            backgroundColor: "#000000",
+            iconColor: "#FFFFFF",
+            coverURL: "/images/night-tale-cover.jpg",
+            links: [
+                {
+                    url: "https://www.youtube.com/watch?v=Qv0KfGO8kmQ",
+                    platform: "youtube"
+                },
+                {
+                    url: "https://open.spotify.com/track/4lqOpB3BlpFDxw6QzbMgDU",
+                    platform: "spotify"
+                }
+            ],
+            pagePath: "/night-tale-remix"
+        },
         "liar": {
             title: "LIAR",
             subtitle: "SINGLE",
@@ -20,7 +60,7 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
                     platform: "youtube"
                 },
                 {
-                    url: "https://open.spotify.com/album/602b9w3nrY39vkC9J1ghlk?si=sVgUQHNQSQ-OY7zumh0O8Q",
+                    url: "https://open.spotify.com/album/602b9w3nrY39vkC9J1ghlk",
                     platform: "spotify"
                 },
                 {
@@ -64,7 +104,7 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
                     platform: "youtube"
                 },
                 {
-                    url: "https://open.spotify.com/album/1TKLYKxIimWks7mIH6JpR8?si=Vp0DURJpS8qk-AA7zaefIA",
+                    url: "https://open.spotify.com/album/1TKLYKxIimWks7mIH6JpR8",
                     platform: "spotify"
                 },
                 {
@@ -89,7 +129,7 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
                     platform: "youtube"
                 },
                 {
-                    url: "https://open.spotify.com/album/73lP6GBHDPihFEITcWDRoF?si=e8EdyL25RzKyr79tofbUrg",
+                    url: "https://open.spotify.com/album/73lP6GBHDPihFEITcWDRoF",
                     platform: "spotify"
                 },
                 {
@@ -113,7 +153,7 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
                     platform: "youtube"
                 },
                 {
-                    url: "https://open.spotify.com/album/1dfhGweMVsc1xgEfkPlE7X?si=rjVT75e4TUSUmTEBNRbhhA",
+                    url: "https://open.spotify.com/album/1dfhGweMVsc1xgEfkPlE7X",
                     platform: "spotify"
                 },
                 {
@@ -138,7 +178,7 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
                     platform: "youtube"
                 },
                 {
-                    url: "https://open.spotify.com/album/5JKLq88LAWkYA1LZtRmBvf?si=m7mF_81PQYe2nbdpkeNerA",
+                    url: "https://open.spotify.com/album/5JKLq88LAWkYA1LZtRmBvf",
                     platform: "spotify"
                 },
                 {
@@ -162,7 +202,7 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
                     platform: "youtube"
                 },
                 {
-                    url: "https://open.spotify.com/track/5qAomWwo2ocnha3158aP8H?si=92642bf48a3243ba",
+                    url: "https://open.spotify.com/track/5qAomWwo2ocnha3158aP8H",
                     platform: "spotify"
                 },
                 {
@@ -186,7 +226,7 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
                     platform: "youtube"
                 },
                 {
-                    url: "https://open.spotify.com/album/4zm0HzCLKT7XJO8bAz29P5?si=wlqJ6lHOTku8arx2Z8dmWQ",
+                    url: "https://open.spotify.com/album/4zm0HzCLKT7XJO8bAz29P5",
                     platform: "spotify"
                 },
                 {
@@ -210,7 +250,7 @@ export default defineEventHandler((event): Record<string, pageOptions> | pageOpt
                     platform: "youtube"
                 },
                 {
-                    url: "https://open.spotify.com/album/2lj7IEMCthtOMSGiD5ooBQ?si=17WS8oihRNSk6bqMVBxtHg",
+                    url: "https://open.spotify.com/album/2lj7IEMCthtOMSGiD5ooBQ",
                     platform: "spotify"
                 },
                 {
