@@ -95,12 +95,12 @@ if (data && data.length > 0) {
     </div>
     <div class="grid home place-items-center my-12 gap-y-12">
       <hover-item v-for="track in data" :key="track.id">
-        <NuxtLink
+        <nuxt-link
           :to="track.id"
           class="max-w-full flex flex-col drop-shadow-lg overflow-hidden non-drag"
         >
           <track-card card-type="simple" :track="track" />
-        </NuxtLink>
+        </nuxt-link>
       </hover-item>
     </div>
   </div>

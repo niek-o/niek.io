@@ -51,9 +51,9 @@ useHead({
   <div>
     <nuxt-img
       :src="data.backgroundImage ? `background/${data.id}` : `cover/${data.id}`"
-      width="1024"
-      format="webp"
-      height="1024"
+      width="512"
+      height="512"
+      loading="lazy"
       provider="backEnd"
       alt="Album cover"
       class="blur fixed object-cover scale-125 w-full h-full -z-10 non-drag"

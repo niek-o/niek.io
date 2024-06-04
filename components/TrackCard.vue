@@ -10,8 +10,6 @@ const { track } = defineProps<{
 }>()
 
 const { backgroundColor, accentColor, id, title, subtitle, links } = track
-
-const runtimeConfig = useRuntimeConfig()
 </script>
 
 <template>
@@ -49,11 +47,11 @@ const runtimeConfig = useRuntimeConfig()
         style="background-color: v-bind(backgroundColor)"
       >
         <nuxt-img
-          width="1024"
-          height="1024"
+          :width="cardType === 'full' ? 1024 : 512"
+          :height="cardType === 'full' ? 1024 : 512"
           provider="backEnd"
+          loading="lazy"
           :src="`/cover/${id}`"
-          format="webp"
           alt="album cover"
         />
       </div>

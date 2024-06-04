@@ -6,10 +6,7 @@ export default defineNuxtConfig({
     providers: {
       backEnd: {
         name: 'backEnd',
-        provider: '~/providers/back-end.ts',
-        options: {
-          baseURL: 'https://cdn.niek.io/images'
-        }
+        provider: '~/providers/back-end.ts'
       }
     }
   },
