@@ -56,6 +56,7 @@ useHead({
       loading="lazy"
       provider="backEnd"
       alt="Album cover"
+      densities="1"
       class="blur fixed object-cover scale-125 w-full h-full -z-10 non-drag"
     />
     <track-card card-type="full" :track="data"></track-card>

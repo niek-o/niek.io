@@ -53,6 +53,7 @@ const { backgroundColor, accentColor, id, title, subtitle, links } = track
           loading="lazy"
           :src="`/cover/${id}`"
           alt="album cover"
+          densities="1"
         />
       </div>
     </template>
