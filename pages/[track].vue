@@ -52,6 +52,7 @@ useHead({
     <nuxt-img
       :src="data.backgroundImage ? `background/${data.id}` : `cover/${data.id}`"
       width="1024"
+      format="webp"
       height="1024"
       provider="backEnd"
       alt="Album cover"

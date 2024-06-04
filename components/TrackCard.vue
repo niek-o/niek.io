@@ -40,7 +40,23 @@ const runtimeConfig = useRuntimeConfig()
     }"
   >
     <template #header>
-      <img :src="`${runtimeConfig.public.cdnUrl}/images/cover/${id}`" alt="album cover" />
+      <div
+        class="aspect-square"
+        :class="{
+          'w-fullcard h-fullcard': cardType === 'full',
+          'w-homecard h-homecard': cardType === 'simple'
+        }"
+        style="background-color: v-bind(backgroundColor)"
+      >
+        <nuxt-img
+          width="1024"
+          height="1024"
+          provider="backEnd"
+          :src="`/cover/${id}`"
+          format="webp"
+          alt="album cover"
+        />
+      </div>
     </template>
     <template #title>
       <h1 :class="{ 'text-2xl': cardType === 'simple', 'text-4xl': cardType === 'full' }">
