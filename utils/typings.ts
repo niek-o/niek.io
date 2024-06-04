@@ -1,29 +1,16 @@
 export type pageOptions = {
-    title: string;
-    subtitle: releaseType | string;
-    buttonColor: string;
-    buttonTextColor: string;
-    backgroundColor: string;
-    iconColor: string;
-    coverURL: string;
-    backgroundURL?: string;
-    links: Array<trackLink>
-    pagePath: string;
-};
+  id: string
+  title: string
+  subtitle: string
+  backgroundColor: string
+  accentColor: string
+  backgroundImage: boolean
+  links: Array<trackLink>
+}
 
-type releaseType =
-    "SINGLE"
-    | "EP"
-    | "ALBUM"
-    | "REMIX"
-    | "EDIT";
-
-export type musicPlatform =
-    "youtube"
-    | "soundcloud"
-    | "spotify";
+export type musicPlatform = 'youtube' | 'soundcloud' | 'spotify'
 
 export type trackLink = {
-    url: string,
-    platform: musicPlatform
+  url: string
+  platform: musicPlatform
 }

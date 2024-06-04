@@ -1,0 +1,13 @@
+import { defineEventHandler } from 'h3'
+
+export default defineEventHandler(async (event) => {
+  const runtimeConfig = useRuntimeConfig()
+
+  const songs = await fetch(`${runtimeConfig.public.cdnUrl}/tracks/visible`, {
+    headers: {
+      'x-api-key': runtimeConfig.apiKey
+    }
+  })
+
+  return await songs.json()
+})
