@@ -50,8 +50,8 @@ if (data && data.length > 0) {
 
 <template>
   <div>
-    <div
-      class="flex flex-row place-items-center justify-between px-5 w-full h-full bg-black drop-shadow-lg"
+    <header
+      class="flex flex-row place-items-center justify-between px-5 w-full h-24 bg-black drop-shadow-lg"
     >
       <hover-item class="w-24 h-24">
         <img
@@ -92,8 +92,20 @@ if (data && data.length > 0) {
           />
         </a>
       </div>
-    </div>
-    <div class="grid home place-items-center my-12 gap-y-12">
+    </header>
+    <section
+      class="bg-center bg-cover bg-no-repeat md:bg-fixed bg-[url('/images/hero.jpg')] bg-gray-700 bg-blend-multiply"
+    >
+      <div class="px-4 mx-auto max-w-screen-xl h-screen text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-9xl font-bold text-white">NIEK</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+          DJ AND PRODUCER
+        </p>
+        <p class="pt-96 text-3xl text-white font-bold">MY MUSIC</p>
+        <p class="pt-4 mb-8 text-3xl text-white font-bold">V</p>
+      </div>
+    </section>
+    <main class="grid home place-items-center p-12 py-24 gap-y-12">
       <hover-item v-for="track in data" :key="track.id">
         <nuxt-link
           :to="track.id"
@@ -102,7 +114,13 @@ if (data && data.length > 0) {
           <track-card card-type="simple" :track="track" />
         </nuxt-link>
       </hover-item>
-    </div>
+    </main>
+    <footer class="w-screen h-64 bg-black text-center p-24">
+      <h3 class="text-white text-xl md:text-3xl font-bold">FOR BOOKINGS AND INQUIRIES:</h3>
+      <a href="mailto:contact@niek.io" class="text-white text-lg md:text-2xl underline"
+        >contact@niek.io</a
+      >
+    </footer>
   </div>
 </template>
 
