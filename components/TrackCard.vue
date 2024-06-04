@@ -4,28 +4,12 @@ import SpotifyIcon from '@/components/icons/SpotifyIcon.vue'
 import YoutubeIcon from '@/components/icons/YoutubeIcon.vue'
 import type { pageOptions } from '~/utils/typings'
 
-const { track, img } = defineProps<{
+const { track } = defineProps<{
   track: pageOptions
   cardType: 'simple' | 'full'
-  img?: string
 }>()
 
 const { backgroundColor, accentColor, id, title, subtitle, links } = track
-
-const imgStr = ref()
-
-if (img) {
-  imgStr.value = img
-} else {
-  const getImageData = async () => {
-    const { data } = await useFetch(`/api/images/cover/${id}`)
-
-    return data.value
-  }
-
-  const img = await getImageData()
-  imgStr.value = `data:image/webp;base64,${img}`
-}
 
 const runtimeConfig = useRuntimeConfig()
 </script>
@@ -68,7 +52,7 @@ const runtimeConfig = useRuntimeConfig()
           width="1024"
           height="1024"
           provider="backEnd"
-          :src="imgStr"
+          :src="`/cover/${id}`"
           format="webp"
           alt="album cover"
         />
