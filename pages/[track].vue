@@ -53,7 +53,6 @@ useHead({
       :src="data.backgroundImage ? `background/${data.id}` : `cover/${data.id}`"
       width="512"
       height="512"
-      loading="lazy"
       provider="backEnd"
       alt="Album cover"
       densities="1"

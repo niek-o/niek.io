@@ -50,7 +50,6 @@ const { backgroundColor, accentColor, id, title, subtitle, links } = track
           :width="cardType === 'full' ? 1024 : 512"
           :height="cardType === 'full' ? 1024 : 512"
           provider="backEnd"
-          loading="lazy"
           :src="`/cover/${id}`"
           alt="album cover"
           densities="1"
