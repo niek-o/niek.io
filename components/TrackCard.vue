@@ -38,14 +38,7 @@ const { backgroundColor, accentColor, id, title, subtitle, links } = track
     }"
   >
     <template #header>
-      <div
-        class="aspect-square"
-        :class="{
-          'w-fullcard h-fullcard': cardType === 'full',
-          'w-homecard h-homecard': cardType === 'simple'
-        }"
-        style="background-color: v-bind(backgroundColor)"
-      >
+      <div class="aspect-square w-full" style="background-color: v-bind(backgroundColor)">
         <nuxt-img
           :width="cardType === 'full' ? 1024 : 512"
           :height="cardType === 'full' ? 1024 : 512"
