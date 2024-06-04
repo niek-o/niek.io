@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 
   const runtimeConfig = useRuntimeConfig()
 
-  const song = await fetch(`${runtimeConfig.public.cdnUrl}/track/${routeParam}`, {
+  const song = await fetch(`${runtimeConfig.cdnUrl}/track/${routeParam}`, {
     headers: {
       'x-api-key': runtimeConfig.apiKey
     }

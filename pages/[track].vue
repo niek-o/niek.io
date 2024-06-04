@@ -14,9 +14,20 @@ const getTrackData = async (id: string) => {
   //   }
   // })
 
-  const { data } = await useFetch(`/api/track/${id}`)
+  const { data } = await useFetch(`/api/track/${id}`, {
+    getCachedData(key, nuxt) {
+      if (nuxt.isHydrating && nuxt.payload.data[key]) {
+        return nuxt.payload.data[key]
+      }
 
-  console.log(data.value)
+      // Check if the data is already cached in the static data
+      if (nuxt.static.data[key]) {
+        return nuxt.static.data[key]
+      }
+
+      return null
+    }
+  })
 
   // if (!data.value) {
   //   await router.push('/')
@@ -26,6 +37,31 @@ const getTrackData = async (id: string) => {
 }
 
 const data = await getTrackData(name)
+
+const getCoverImageData = async (id: string) => {
+  const { data } = await useFetch(`/api/images/cover/${id}`)
+
+  if (!data.value) {
+    await router.push('/')
+  }
+
+  return data.value
+}
+
+const getBackgroundImageData = async (id: string) => {
+  const { data } = await useFetch(`/api/images/background/${id}`)
+
+  if (!data.value) {
+    await router.push('/')
+  }
+
+  return data.value
+}
+
+const img = data.backgroundImage
+  ? await getBackgroundImageData(name)
+  : await getCoverImageData(name)
+const imgStr = `data:image/webp;base64,${img}`
 
 useHead({
   title: `NIEK | ${data.title}`,
@@ -50,7 +86,7 @@ useHead({
 <template>
   <div>
     <nuxt-img
-      :src="data.backgroundImage ? `background/${data.id}` : `cover/${data.id}`"
+      :src="imgStr ?? 'pending'"
       width="1024"
       format="webp"
       height="1024"
@@ -58,7 +94,11 @@ useHead({
       alt="Album cover"
       class="blur fixed object-cover scale-125 w-full h-full -z-10 non-drag"
     />
-    <track-card card-type="full" :track="data"></track-card>
+    <track-card
+      card-type="full"
+      :track="data"
+      :img="data.backgroundImage ? undefined : imgStr"
+    ></track-card>
   </div>
 </template>
 
