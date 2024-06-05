@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   primevue: {
     components: {
       prefix: 'Pv',
-      include: ['Card', 'Divider']
+      include: ['Card', 'Divider', 'Menubar']
     }
   },
   devServer: {
