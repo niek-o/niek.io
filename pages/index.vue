@@ -95,11 +95,12 @@ const scrollTo = (element: HTMLElement | null) => {
           DJ AND PRODUCER
         </p>
         <p class="pt-48 sm:pt-80 text-3xl text-white font-bold">MY MUSIC</p>
-        <a
+        <p
           class="pt-4 mb-8 text-3xl text-white font-bold hover:cursor-pointer"
           @click="scrollTo(trackList)"
-          >↓</a
         >
+          ↓
+        </p>
         <div class="text-gray-500 font-light sm:text-xs flex flex-row gap-2">
           <div class="text-left">
             <p>Image shot by</p>
