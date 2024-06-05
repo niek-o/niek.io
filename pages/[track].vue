@@ -29,6 +29,9 @@ const data = await getTrackData(name)
 
 useHead({
   title: `NIEK | ${data.title}`,
+  htmlAttrs: {
+    lang: 'en'
+  },
   meta: [
     { name: 'og:title', content: `NIEK | ${data.title}` },
     { name: 'og:description', content: `${data.title} OUT NOW` },
