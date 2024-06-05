@@ -1,26 +1,19 @@
 <script setup lang="ts">
 import type { pageOptions } from '~/utils/typings'
 
-const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const router = useRouter()
 
 const name = <string>route.params.track
 
 const getTrackData = async (id: string) => {
-  // const { data } = await useFetch(`${runtimeConfig.CDN_URL}/track/${id}`, {
-  //   headers: {
-  //     'x-api-key': runtimeConfig.apiKey
-  //   }
-  // })
-
   const { data } = await useFetch(`/api/track/${id}`)
 
   console.log(data.value)
 
-  // if (!data.value) {
-  //   await router.push('/')
-  // }
+  if (!data.value) {
+    await router.push('/')
+  }
 
   return (await data.value) as pageOptions
 }
