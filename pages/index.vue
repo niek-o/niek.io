@@ -43,7 +43,7 @@ const scrollTo = (element: HTMLElement | null) => {
 <template>
   <div>
     <header
-      class="flex flex-row place-items-center justify-between px-5 w-full h-12 sm:h-24 bg-black drop-shadow-lg non-drag fixed z-10"
+      class="flex flex-row place-items-center justify-between px-5 w-full h-12 sm:h-24 bg-black drop-shadow-lg non-drag z-10"
     >
       <hover-item class="w-24 h-24">
         <img
