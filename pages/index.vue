@@ -41,7 +41,7 @@ const scrollTo = (element: HTMLElement | null) => {
 </script>
 
 <template>
-  <div class="w-screen overflow-x-hidden">
+  <div class="w-full overflow-x-hidden">
     <header
       class="flex flex-row place-items-center justify-between px-5 w-full h-12 sm:h-24 bg-black drop-shadow-lg non-drag z-10"
     >
