@@ -106,7 +106,9 @@ const scrollTo = (element: HTMLElement | null) => {
             <p>Image shot by</p>
             <span>
               <IconsInstagram class="w-4 fill-gray-500 inline mr-1" />
-              <a href="https://instagram.com/gewoon_gina" class="underline">@gewoon_gina</a>
+              <a href="https://instagram.com/gewoon_gina" target="_blank" class="underline"
+                >@gewoon_gina</a
+              >
             </span>
           </div>
         </div>
