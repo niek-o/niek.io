@@ -9,49 +9,29 @@ const getTrackData = async () => {
 
 const data = await getTrackData()
 
-if (data && data.length > 0) {
-  useHead({
-    title: 'NIEK',
-    meta: [
-      { name: 'og:title', content: 'NIEK' },
-      { name: 'og:description', content: `${data[0].title} OUT NOW` },
-      { name: 'og:image', content: 'https://niek.io/images/logo.png' },
-      { name: 'og:url', content: 'https://niek.io' },
+useHead({
+  title: 'NIEK',
+  meta: [
+    { name: 'og:title', content: 'NIEK' },
+    { name: 'og:description', content: `DJ & PRODUCER` },
+    { name: 'og:image', content: 'https://niek.io/images/logo.png' },
+    { name: 'og:url', content: 'https://niek.io' },
 
-      { name: 'theme-color', content: '#2587FB' },
+    { name: 'theme-color', content: '#2587FB' },
 
-      { name: 'twitter:title', content: 'NIEK' },
-      { name: 'twitter:description', content: `${data[0].title} OUT NOW` },
-      { name: 'twitter:domain', content: 'https://niek.io/' },
-      { name: 'twitter:url', content: 'https://niek.io' },
-      { name: 'twitter:image', content: 'https://niek.io/images/logo.png' }
-    ]
-  })
-} else {
-  useHead({
-    title: 'NIEK',
-    meta: [
-      { name: 'og:title', content: 'NIEK' },
-      { name: 'og:description', content: `DJ & PRODUCER` },
-      { name: 'og:image', content: 'https://niek.io/images/logo.png' },
-      { name: 'og:url', content: 'https://niek.io' },
-
-      { name: 'theme-color', content: '#2587FB' },
-
-      { name: 'twitter:title', content: 'NIEK' },
-      { name: 'twitter:description', content: `DJ & PRODUCER` },
-      { name: 'twitter:domain', content: 'https://niek.io/' },
-      { name: 'twitter:url', content: 'https://niek.io' },
-      { name: 'twitter:image', content: 'https://niek.io/images/logo.png' }
-    ]
-  })
-}
+    { name: 'twitter:title', content: 'NIEK' },
+    { name: 'twitter:description', content: `DJ & PRODUCER` },
+    { name: 'twitter:domain', content: 'https://niek.io/' },
+    { name: 'twitter:url', content: 'https://niek.io' },
+    { name: 'twitter:image', content: 'https://niek.io/images/logo.png' }
+  ]
+})
 </script>
 
 <template>
   <div>
     <header
-      class="flex flex-row place-items-center justify-between px-5 w-full h-24 bg-black drop-shadow-lg"
+      class="flex flex-row place-items-center justify-between px-5 w-full h-12 sm:h-24 bg-black drop-shadow-lg"
     >
       <hover-item class="w-24 h-24">
         <img
@@ -67,7 +47,7 @@ if (data && data.length > 0) {
           <icons-youtube-icon
             fill="#FFFFFF"
             center-fill="#000000"
-            class="w-12 h-12 ease-in-out duration-100 sm:hover:scale-105"
+            class="w-8 h-8 sm:w-12 sm:h-12 ease-in-out duration-100 sm:hover:scale-105"
           />
         </a>
         <a
@@ -77,18 +57,18 @@ if (data && data.length > 0) {
         >
           <icons-spotify-icon
             fill="#FFFFFF"
-            class="w-12 h-12 ease-in-out duration-100 sm:hover:scale-105"
+            class="w-8 h-8 sm:w-12 sm:h-12 ease-in-out duration-100 sm:hover:scale-105"
           />
         </a>
         <a href="https://soundcloud.com/niek_o" target="_blank" class="non-drag">
           <icons-soundcloud-icon
             fill="#FFFFFF"
-            class="fill-white w-12 h-12 ease-in-out duration-100 sm:hover:scale-105"
+            class="w-8 h-8 sm:w-12 sm:h-12 ease-in-out duration-100 sm:hover:scale-105"
           />
         </a>
         <a href="https://www.instagram.com/official.niek" target="_blank" class="non-drag">
           <IconsInstagram
-            class="fill-white w-12 h-12 ease-in-out duration-100 sm:hover:scale-105"
+            class="fill-white w-8 h-8 sm:w-12 sm:h-12 ease-in-out duration-100 sm:hover:scale-105"
           />
         </a>
       </div>
@@ -101,16 +81,15 @@ if (data && data.length > 0) {
         <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
           DJ AND PRODUCER
         </p>
-        <p class="pt-96 text-3xl text-white font-bold">MY MUSIC</p>
+        <p class="pt-80 text-3xl text-white font-bold">MY MUSIC</p>
         <p class="pt-4 mb-8 text-3xl text-white font-bold">V</p>
       </div>
     </section>
-    <main class="grid home place-items-center p-12 py-24 gap-y-12">
+    <main
+      class="flex flex-row flex-wrap home justify-center place-items-center md:p-12 py-24 gap-12"
+    >
       <hover-item v-for="track in data" :key="track.id">
-        <nuxt-link
-          :to="track.id"
-          class="max-w-full flex flex-col drop-shadow-lg overflow-hidden non-drag"
-        >
+        <nuxt-link :to="track.id" class="flex flex-col drop-shadow-lg overflow-hidden non-drag">
           <track-card card-type="simple" :track="track" />
         </nuxt-link>
       </hover-item>
@@ -123,9 +102,3 @@ if (data && data.length > 0) {
     </footer>
   </div>
 </template>
-
-<style scoped>
-.home {
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-}
-</style>

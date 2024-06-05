@@ -6,7 +6,7 @@ module.exports = {
         22: '5.5rem',
         homecard: '25rem',
         fullcard: '35rem',
-        fullcard_mobile: '90vw'
+        fullcard_mobile: '85vw'
       }
     }
   },

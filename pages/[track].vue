@@ -56,10 +56,8 @@ useHead({
       provider="backEnd"
       alt="Album cover"
       densities="1"
-      class="blur fixed object-cover scale-125 w-full h-full -z-10 non-drag"
+      class="blur fixed -mt-8 sm:mt-0 object-cover scale-125 w-full h-full -z-10 non-drag"
     />
-    <track-card card-type="full" :track="data"></track-card>
+    <track-card class="mx-auto sm:ml-20 mt-8 sm:mt-20" card-type="full" :track="data"></track-card>
   </div>
 </template>
-
-<style scoped></style>

@@ -16,8 +16,8 @@ const { backgroundColor, accentColor, id, title, subtitle, links } = track
   <pv-card
     class="text-center"
     :class="{
-      'w-fullcard_mobile mx-auto sm:ml-20 sm:mt-20 sm:w-fullcard': cardType === 'full',
-      'w-homecard': cardType === 'simple'
+      'w-fullcard_mobile sm:w-fullcard': cardType === 'full',
+      'w-80 sm:w-96': cardType === 'simple'
     }"
     :pt="{
       root: {
@@ -50,7 +50,12 @@ const { backgroundColor, accentColor, id, title, subtitle, links } = track
       </div>
     </template>
     <template #title>
-      <h1 :class="{ 'text-2xl': cardType === 'simple', 'text-4xl': cardType === 'full' }">
+      <h1
+        :class="{
+          'text-xl sm:text-2xl': cardType === 'simple',
+          'text-2xl sm:text-4xl': cardType === 'full'
+        }"
+      >
         {{ title }}
       </h1>
     </template>
