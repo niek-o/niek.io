@@ -74,15 +74,15 @@ useHead({
       </div>
     </header>
     <section
-      class="bg-center bg-cover bg-no-repeat md:bg-fixed bg-[url('/images/hero.jpg')] bg-gray-700 bg-blend-multiply"
+      class="bg-center bg-cover bg-no-repeat sm:bg-fixed bg-[url('/images/hero.jpg')] bg-gray-700 bg-blend-multiply"
     >
-      <div class="px-4 mx-auto max-w-screen-xl h-screen text-center py-24 lg:py-56">
+      <div class="px-4 mx-auto max-w-screen-xl sm:h-screen text-center py-24 lg:py-56">
         <h1 class="mb-4 text-9xl font-bold text-white">NIEK</h1>
         <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
           DJ AND PRODUCER
         </p>
-        <p class="pt-80 text-3xl text-white font-bold">MY MUSIC</p>
-        <p class="pt-4 mb-8 text-3xl text-white font-bold">V</p>
+        <p class="pt-48 sm:pt-80 text-3xl text-white font-bold">MY MUSIC</p>
+        <p class="pt-4 mb-8 text-3xl text-white font-bold">↓</p>
       </div>
     </section>
     <main
@@ -94,8 +94,8 @@ useHead({
         </nuxt-link>
       </hover-item>
     </main>
-    <footer class="w-screen h-64 bg-black text-center p-24">
-      <h3 class="text-white text-xl md:text-3xl font-bold">FOR BOOKINGS AND INQUIRIES:</h3>
+    <footer class="w-screen h-64 bg-black text-center py-24">
+      <h3 class="text-white text-lg md:text-3xl font-bold">FOR BOOKINGS AND INQUIRIES:</h3>
       <a href="mailto:contact@niek.io" class="text-white text-lg md:text-2xl underline"
         >contact@niek.io</a
       >

@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     }
   },
   devServer: {
-    port: 5174
+    port: 5174,
+    host: '0.0.0.0'
   },
   runtimeConfig: {
     apiKey: process.env.NUXT_API_KEY, // can be overridden by NUXT_API_SECRET environment variable
