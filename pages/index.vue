@@ -14,7 +14,7 @@ useHead({
   meta: [
     { name: 'og:title', content: 'NIEK' },
     { name: 'og:description', content: `DJ & PRODUCER` },
-    { name: 'og:image', content: 'https://niek.io/images/logo.png' },
+    { name: 'og:image', content: 'https://niek.io/images/hero.jpg' },
     { name: 'og:url', content: 'https://niek.io' },
 
     { name: 'theme-color', content: '#2587FB' },
@@ -23,7 +23,7 @@ useHead({
     { name: 'twitter:description', content: `DJ & PRODUCER` },
     { name: 'twitter:domain', content: 'https://niek.io/' },
     { name: 'twitter:url', content: 'https://niek.io' },
-    { name: 'twitter:image', content: 'https://niek.io/images/logo.png' }
+    { name: 'twitter:image', content: 'https://niek.io/images/hero.jpg' }
   ]
 })
 </script>
