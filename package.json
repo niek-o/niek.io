@@ -16,7 +16,9 @@
     "prettier": "^3.3.0"
   },
   "dependencies": {
+    "1llest-waveform-vue": "^1.2.0",
     "@nuxt/image": "^1.7.0",
+    "primeicons": "^7.0.0",
     "primevue": "^3.52.0"
   }
 }

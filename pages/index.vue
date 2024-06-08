@@ -9,6 +9,14 @@ const getTrackData = async () => {
 
 const data = await getTrackData();
 
+const scrollPosition = ref<any>(0);
+
+onMounted(() => {
+    window.addEventListener("scroll", () => {
+        scrollPosition.value = window.scrollY;
+    });
+});
+
 useHead({
     title: "NIEK",
     htmlAttrs: {
@@ -38,14 +46,30 @@ const trackList = ref<HTMLElement | null>(null);
 const scrollTo = (element: HTMLElement | null) => {
     element?.scrollIntoView({ behavior: "smooth" });
 };
+
+const hero = ref();
+
+const headerColor = computed(() => {
+    if (!hero.value) {
+        return;
+    }
+
+    return scrollPosition.value > hero.value.scrollHeight - 100
+        ? "bg-black"
+        : scrollPosition.value > 10
+          ? "bg-black bg-opacity-30"
+          : "bg-transparent";
+});
 </script>
 
 <template>
     <div class="w-full overflow-x-hidden">
         <pv-menubar
+            class="fixed w-full transition-colors duration-200 ease-in-out"
+            :class="headerColor"
             :pt="{
                 root: {
-                    class: 'bg-black border-none rounded-none p-5 h-12 sm:h-24'
+                    class: 'border-none rounded-none p-5 h-12 sm:h-24 z-10'
                 }
             }"
         >
@@ -110,6 +134,7 @@ const scrollTo = (element: HTMLElement | null) => {
 
         <section
             class="bg-center bg-cover bg-no-repeat sm:bg-fixed bg-[url('/images/hero.jpg')] bg-gray-700 bg-blend-multiply non-drag"
+            ref="hero"
         >
             <div class="px-4 mx-auto max-w-screen-xl sm:h-screen text-center py-24 lg:py-56">
                 <h1 class="mb-4 text-8xl sm:text-9xl font-bold text-white">NIEK</h1>
@@ -117,12 +142,11 @@ const scrollTo = (element: HTMLElement | null) => {
                     DJ AND PRODUCER
                 </p>
                 <p class="pt-48 sm:pt-80 text-3xl text-white font-bold">MY MUSIC</p>
-                <p
-                    class="pt-4 mb-8 text-3xl text-white font-bold hover:cursor-pointer"
+                <i
+                    class="pt-4 mb-8 text-3xl text-white hover:cursor-pointer pi pi-arrow-down"
                     @click="scrollTo(trackList)"
                 >
-                    ↓
-                </p>
+                </i>
                 <div class="text-gray-500 font-light sm:text-xs flex flex-row gap-2">
                     <div class="text-left">
                         <p>Image shot by</p>
@@ -141,7 +165,7 @@ const scrollTo = (element: HTMLElement | null) => {
         </section>
 
         <main
-            class="flex flex-row flex-wrap home justify-center place-items-center md:p-12 py-24 gap-12"
+            class="flex flex-row flex-wrap home justify-center place-items-center md:p-12 py-24 gap-12 bg-white"
             ref="trackList"
         >
             <hover-item v-for="track in data" :key="track.id">

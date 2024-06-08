@@ -5,9 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  1llest-waveform-vue:
+    specifier: ^1.2.0
+    version: 1.2.0
   '@nuxt/image':
     specifier: ^1.7.0
     version: 1.7.0
+  primeicons:
+    specifier: ^7.0.0
+    version: 7.0.0
   primevue:
     specifier: ^3.52.0
     version: 3.52.0(vue@3.4.27)
@@ -36,6 +42,14 @@ devDependencies:
     version: 3.3.0
 
 packages:
+
+  /1llest-waveform-vue@1.2.0:
+    resolution: {integrity: sha512-cLxWBsf5geB8ttyzZYec3UX1bh5opU2WbtRF8j7X0qgKKJsRX8e9sYcQKG2LPolZZqj6NGOjDVSUNqRV4fnzLA==}
+    dependencies:
+      vue: 3.4.27
+    transitivePeerDependencies:
+      - typescript
+    dev: false
 
   /@alloc/quick-lru@5.2.0:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -6305,6 +6319,10 @@ packages:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dev: true
+
+  /primeicons@7.0.0:
+    resolution: {integrity: sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==}
+    dev: false
 
   /primevue@3.52.0(vue@3.4.27):
     resolution: {integrity: sha512-HLOVP5YI0ArFKUhIyfZsWmTNMaBYNCBWC/3DYvdd/Po4LY5/WXf7yIYvArE2q/3OuwSXJXvjlR8UNQeJYRSQog==}
