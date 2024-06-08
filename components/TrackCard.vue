@@ -185,6 +185,7 @@ const playpause = () => {
                             class: 'text-xl'
                         }
                     }"
+                    aria-label="Play preview"
                 ></pv-button>
                 <pv-button
                     icon="pi pi-pause"
@@ -203,6 +204,7 @@ const playpause = () => {
                             class: 'text-xl'
                         }
                     }"
+                    aria-label="Pause preview"
                 ></pv-button>
                 <illest-waveform
                     :key="componentKey"
@@ -221,14 +223,17 @@ const playpause = () => {
                     <youtube-icon
                         class="w-16 h-16 border-2 border-[#ff0000] rounded-lg p-2"
                         v-if="link.platform === 'youtube'"
+                        aria-label="Watch on youtube"
                     />
                     <soundcloud-icon
                         class="w-16 h-16 border-2 border-[#f05000] rounded-lg p-2"
                         v-else-if="link.platform === 'soundcloud'"
+                        aria-label="Stream on soundcloud"
                     />
                     <spotify-icon
                         class="w-16 h-16 border-2 border-[#2ebd59] rounded-lg p-2"
                         v-else-if="link.platform === 'spotify'"
+                        aria-label="Stream on spotify"
                     />
                 </a>
             </div>
