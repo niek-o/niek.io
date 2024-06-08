@@ -166,7 +166,7 @@ const playpause = () => {
         <template #subtitle>{{ subtitle }}</template>
         <template #content v-if="cardType === 'full'">
             <pv-divider />
-            <div class="w-full h-16 flex flex-row place-items-center gap-4">
+            <div class="w-full h-10 sm:h-16 flex flex-row place-items-center gap-4">
                 <pv-button
                     class="text-3xl"
                     icon="pi pi-play"
