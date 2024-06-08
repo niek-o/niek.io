@@ -55,7 +55,7 @@ useHead({
             class="blur fixed -mt-8 sm:mt-0 object-cover scale-125 w-full h-full -z-10 non-drag"
         />
         <track-card
-            class="mx-auto sm:ml-20 mt-3 sm:mt-20"
+            class="mx-auto sm:ml-20 mt-3 sm:mt-10"
             card-type="full"
             :track="data"
         ></track-card>
