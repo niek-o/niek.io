@@ -165,77 +165,79 @@ const playpause = () => {
         </template>
         <template #subtitle>{{ subtitle }}</template>
         <template #content v-if="cardType === 'full'">
-            <pv-divider />
-            <div class="w-full h-10 sm:h-16 flex flex-row place-items-center gap-4">
-                <pv-button
-                    class="text-3xl"
-                    icon="pi pi-play"
-                    v-if="!playing"
-                    @click="playpause"
-                    :pt="{
-                        root: {
-                            style: {
-                                backgroundColor: backgroundColor,
-                                borderColor: accentColor,
-                                color: accentColor,
-                                aspectRatio: '1/1'
+            <div class="flex flex-col gap-0">
+                <pv-divider />
+                <div class="w-full h-10 sm:h-16 flex flex-row place-items-center gap-4">
+                    <pv-button
+                        class="text-3xl"
+                        icon="pi pi-play"
+                        v-if="!playing"
+                        @click="playpause"
+                        :pt="{
+                            root: {
+                                style: {
+                                    backgroundColor: backgroundColor,
+                                    borderColor: accentColor,
+                                    color: accentColor,
+                                    aspectRatio: '1/1'
+                                }
+                            },
+                            icon: {
+                                class: 'text-xl'
                             }
-                        },
-                        icon: {
-                            class: 'text-xl'
-                        }
-                    }"
-                    aria-label="Play preview"
-                ></pv-button>
-                <pv-button
-                    icon="pi pi-pause"
-                    v-else
-                    @click="playpause"
-                    :pt="{
-                        root: {
-                            style: {
-                                backgroundColor: accentColor,
-                                borderColor: backgroundColor,
-                                color: backgroundColor,
-                                aspectRatio: '1/1'
+                        }"
+                        aria-label="Play preview"
+                    ></pv-button>
+                    <pv-button
+                        icon="pi pi-pause"
+                        v-else
+                        @click="playpause"
+                        :pt="{
+                            root: {
+                                style: {
+                                    backgroundColor: accentColor,
+                                    borderColor: backgroundColor,
+                                    color: backgroundColor,
+                                    aspectRatio: '1/1'
+                                }
+                            },
+                            icon: {
+                                class: 'text-xl'
                             }
-                        },
-                        icon: {
-                            class: 'text-xl'
-                        }
-                    }"
-                    aria-label="Pause preview"
-                ></pv-button>
-                <illest-waveform
-                    :key="componentKey"
-                    ref="waveformRef"
-                    v-bind="waveOptions"
-                    @on-init="initHandler"
-                    @on-fetched="fetchedHandler"
-                    @on-ready="readyHandler"
-                    @on-play="(v: boolean) => (playing = v)"
-                    @on-pause="(v: boolean) => (playing = v)"
-                />
-            </div>
-            <pv-divider />
-            <div class="flex flex-row gap-4 justify-center">
-                <a :href="link.url" target="_blank" v-for="link in links" :key="link.platform">
-                    <youtube-icon
-                        class="w-16 h-16 border-2 border-[#ff0000] rounded-lg p-2"
-                        v-if="link.platform === 'youtube'"
-                        aria-label="Watch on youtube"
+                        }"
+                        aria-label="Pause preview"
+                    ></pv-button>
+                    <illest-waveform
+                        :key="componentKey"
+                        ref="waveformRef"
+                        v-bind="waveOptions"
+                        @on-init="initHandler"
+                        @on-fetched="fetchedHandler"
+                        @on-ready="readyHandler"
+                        @on-play="(v: boolean) => (playing = v)"
+                        @on-pause="(v: boolean) => (playing = v)"
                     />
-                    <soundcloud-icon
-                        class="w-16 h-16 border-2 border-[#f05000] rounded-lg p-2"
-                        v-else-if="link.platform === 'soundcloud'"
-                        aria-label="Stream on soundcloud"
-                    />
-                    <spotify-icon
-                        class="w-16 h-16 border-2 border-[#2ebd59] rounded-lg p-2"
-                        v-else-if="link.platform === 'spotify'"
-                        aria-label="Stream on spotify"
-                    />
-                </a>
+                </div>
+                <pv-divider />
+                <div class="flex flex-row gap-4 justify-center">
+                    <a :href="link.url" target="_blank" v-for="link in links" :key="link.platform">
+                        <youtube-icon
+                            class="w-12 h-12 sm:w-16 sm:h-16 border-[1px] sm:border-2 border-[#ff0000] rounded-lg p-2"
+                            v-if="link.platform === 'youtube'"
+                            aria-label="Watch on youtube"
+                        />
+                        <soundcloud-icon
+                            class="w-12 h-12 sm:w-16 sm:h-16 border-[1px] sm:border-2 border-[#f05000] rounded-lg p-2"
+                            v-else-if="link.platform === 'soundcloud'"
+                            aria-label="Stream on soundcloud"
+                        />
+                        <spotify-icon
+                            class="w-12 h-12 sm:w-16 sm:h-16 border-[1px] sm:border-2 border-[#2ebd59] rounded-lg p-2"
+                            v-else-if="link.platform === 'spotify'"
+                            aria-label="Stream on spotify"
+                        />
+                    </a>
+                </div>
             </div>
         </template>
     </pv-card>
