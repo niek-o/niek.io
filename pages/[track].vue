@@ -26,6 +26,9 @@ useHead({
         lang: "en"
     },
     meta: [
+        { name: "title", content: `NIEK | ${data.title}` },
+        { name: "description", content: `${data.title} OUT NOW` },
+
         { name: "og:title", content: `NIEK | ${data.title}` },
         { name: "og:description", content: `${data.title} OUT NOW` },
         { name: "og:image", content: `${"https://cdn.niek.io/images/cover/" + data.id}` },

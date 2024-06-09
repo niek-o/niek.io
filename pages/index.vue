@@ -37,7 +37,8 @@ useHead({
         { name: "twitter:description", content: `DJ & PRODUCER` },
         { name: "twitter:domain", content: "https://niek.io/" },
         { name: "twitter:url", content: "https://niek.io" },
-        { name: "twitter:image", content: "https://niek.io/images/hero.jpg" }
+        { name: "twitter:image", content: "https://niek.io/images/hero.jpg" },
+        { name: "twitter:card", content: "summary_large_image" }
     ]
 });
 
