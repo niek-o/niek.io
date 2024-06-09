@@ -67,7 +67,7 @@ const headerColor = computed(() => {
     <div class="w-full overflow-x-hidden">
         <pv-menubar
             class="fixed w-full transition-colors duration-200 ease-in-out"
-            :class="headerColor"
+            :class="headerColor ?? 'bg-transparent'"
             :pt="{
                 root: {
                     class: 'border-none rounded-none p-5 h-12 sm:h-24 z-10'
@@ -75,13 +75,16 @@ const headerColor = computed(() => {
             }"
         >
             <template #start>
-                <img
-                    width="100px"
-                    height="auto"
-                    src="/images/logo.png"
-                    alt="NIEK LOGO"
-                    class="flex flex-row flex-shrink justify-self-start"
-                />
+                <div class="w-auto h-full">
+                    <nuxt-img
+                        class="h-20 w-20 sm:h-24 sm:w-24"
+                        width="256"
+                        height="auto"
+                        src="/images/logo.webp"
+                        densities="1"
+                        alt="NIEK LOGO"
+                    />
+                </div>
             </template>
 
             <template #end>
@@ -134,7 +137,7 @@ const headerColor = computed(() => {
         </pv-menubar>
 
         <section
-            class="bg-center bg-cover bg-no-repeat sm:bg-fixed bg-[url('/images/hero.jpg')] bg-gray-700 bg-blend-multiply non-drag"
+            class="bg-center bg-cover bg-no-repeat sm:bg-fixed bg-[url('/images/hero.webp')] bg-gray-700 bg-blend-multiply non-drag"
             ref="hero"
         >
             <div class="px-4 mx-auto max-w-screen-xl sm:h-screen text-center py-24 lg:py-56">
