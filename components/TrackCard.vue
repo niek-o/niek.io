@@ -149,12 +149,14 @@ const playpause = () => {
                     provider="backEnd"
                     :src="`/cover/${id}`"
                     alt="album cover"
+                    class="non-drag"
                     densities="1"
                 />
             </div>
         </template>
         <template #title>
             <h1
+                class="non-drag"
                 :class="{
                     'text-xl sm:text-2xl': cardType === 'simple',
                     'text-2xl sm:text-4xl': cardType === 'full'
@@ -163,7 +165,9 @@ const playpause = () => {
                 {{ title }}
             </h1>
         </template>
-        <template #subtitle>{{ subtitle }}</template>
+        <template #subtitle
+            ><span class="non-drag">{{ subtitle }}</span></template
+        >
         <template #content v-if="cardType === 'full'">
             <div class="flex flex-col gap-0">
                 <pv-divider />

@@ -75,7 +75,7 @@ const headerColor = computed(() => {
             }"
         >
             <template #start>
-                <div class="w-auto h-full">
+                <div class="w-auto h-full non-drag">
                     <nuxt-img
                         class="h-20 w-20 sm:h-24 sm:w-24"
                         width="256"
