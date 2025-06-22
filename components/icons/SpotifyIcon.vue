@@ -15,14 +15,9 @@
 </template>
 
 <script setup lang="ts">
-const { fill } = withDefaults(
-    defineProps<{
-        fill?: string;
-    }>(),
-    {
-        fill: "#2ebd59"
-    }
-);
+const { fill = "#2ebd59" } = defineProps<{
+    fill?: string;
+}>();
 </script>
 
 <style scoped>

@@ -117,100 +117,75 @@ const playpause = () => {
 </script>
 
 <template>
-    <pv-card
+    <div
         class="text-center"
         :class="{
-            'w-fullcard_mobile sm:w-fullcard': cardType === 'full',
-            'w-80 sm:w-96': cardType === 'simple'
+            'w-[85vw] sm:w-[35rem]': cardType === 'full',
+            'w-80 sm:w-[25rem]': cardType === 'simple'
         }"
-        :pt="{
-            root: {
-                style: {
-                    backgroundColor: backgroundColor
-                }
-            },
-            title: {
-                style: {
-                    color: accentColor
-                }
-            },
-            subtitle: {
-                style: {
-                    color: accentColor
-                }
-            }
-        }"
+        :style="{ backgroundColor: backgroundColor, color: accentColor }"
     >
-        <template #header>
-            <div class="aspect-square w-full" style="background-color: v-bind(backgroundColor)">
-                <nuxt-img
-                    :width="cardType === 'full' ? 1024 : 512"
-                    :height="cardType === 'full' ? 1024 : 512"
-                    provider="backEnd"
-                    :src="`/cover/${id}`"
-                    alt="album cover"
-                    class="non-drag"
-                    densities="1"
-                />
-            </div>
-        </template>
-        <template #title>
-            <h1
+        <div class="aspect-square w-full" style="background-color: v-bind(backgroundColor)">
+            <nuxt-img
+                :width="cardType === 'full' ? 1024 : 512"
+                :height="cardType === 'full' ? 1024 : 512"
+                provider="backEnd"
+                :src="`/cover/${id}`"
+                alt="album cover"
                 class="non-drag"
+                densities="1"
+            />
+        </div>
+        <div
+            class="non-drag mt-4"
+            :class="{
+                'text-xl sm:text-3xl my-4': cardType === 'simple',
+                'text-2xl sm:text-4xl': cardType === 'full'
+            }"
+        >
+            <h3
+                class="font-bold"
                 :class="{
-                    'text-xl sm:text-2xl': cardType === 'simple',
-                    'text-2xl sm:text-4xl': cardType === 'full'
+                    'text-4xl': cardType === 'full',
+                    'text-2xl': cardType === 'simple'
                 }"
             >
                 {{ title }}
-            </h1>
-        </template>
-        <template #subtitle
-            ><span class="non-drag">{{ subtitle }}</span></template
-        >
-        <template #content v-if="cardType === 'full'">
-            <div class="flex flex-col gap-0">
-                <pv-divider />
+            </h3>
+            <span class="text-xl font-normal">{{ subtitle }}</span>
+        </div>
+        <div v-if="cardType === 'full'">
+            <div class="flex flex-col gap-3 p-6">
+                <hr />
                 <div class="w-full h-10 sm:h-16 flex flex-row place-items-center gap-4">
-                    <pv-button
-                        class="text-3xl"
+                    <button
+                        class="text-2xl border-[1px] p-0.5 rounded-md"
+                        :class="{
+                            backgroundColor: backgroundColor,
+                            borderColor: accentColor,
+                            color: accentColor
+                        }"
                         icon="pi pi-play"
                         v-if="!playing"
                         @click="playpause"
-                        :pt="{
-                            root: {
-                                style: {
-                                    backgroundColor: backgroundColor,
-                                    borderColor: accentColor,
-                                    color: accentColor,
-                                    aspectRatio: '1/1'
-                                }
-                            },
-                            icon: {
-                                class: 'text-xl'
-                            }
-                        }"
                         aria-label="Play preview"
-                    ></pv-button>
-                    <pv-button
-                        icon="pi pi-pause"
+                    >
+                        <i class="pi pi-play px-1" />
+                    </button>
+                    <button
+                        class="text-2xl border-[1px] p-0.5 rounded-md"
+                        :class="{
+                            backgroundColor: backgroundColor,
+                            borderColor: accentColor,
+                            color: accentColor
+                        }"
+                        icon="pi pi-play"
                         v-else
                         @click="playpause"
-                        :pt="{
-                            root: {
-                                style: {
-                                    backgroundColor: accentColor,
-                                    borderColor: backgroundColor,
-                                    color: backgroundColor,
-                                    aspectRatio: '1/1'
-                                }
-                            },
-                            icon: {
-                                class: 'text-xl'
-                            }
-                        }"
-                        aria-label="Pause preview"
-                    ></pv-button>
+                        aria-label="Play preview"
+                    >
+                        <i class="pi pi-pause px-1" />
+                    </button>
                     <illest-waveform
                         :key="componentKey"
                         ref="waveformRef"
@@ -222,7 +197,7 @@ const playpause = () => {
                         @on-pause="(v: boolean) => (playing = v)"
                     />
                 </div>
-                <pv-divider />
+                <hr />
                 <div class="flex flex-row gap-4 justify-center">
                     <a :href="link.url" target="_blank" v-for="link in links" :key="link.platform">
                         <youtube-icon
@@ -243,13 +218,17 @@ const playpause = () => {
                     </a>
                 </div>
             </div>
-        </template>
-    </pv-card>
+        </div>
+    </div>
 </template>
 
 <style scoped>
-.p-divider::before {
+hr {
     border-left-color: v-bind(accentColor);
     border-top-color: v-bind(accentColor);
+}
+
+.text-outline-subtitle {
+    -webkit-text-stroke: 1px v-bind(accentColor);
 }
 </style>

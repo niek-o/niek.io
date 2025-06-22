@@ -1,11 +1,9 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/image-edge", "nuxt-primevue"],
-    css: [
-        "~/assets/css/main.css",
-        "primevue/resources/themes/aura-light-green/theme.css",
-        "primeicons/primeicons.css"
-    ],
+    modules: ["@nuxt/image-edge"],
+    css: ["~/assets/css/main.css", "primeicons/primeicons.css"],
     image: {
         providers: {
             backEnd: {
@@ -14,16 +12,14 @@ export default defineNuxtConfig({
             }
         }
     },
-    primevue: {
-        components: {
-            prefix: "Pv",
-            include: ["Card", "Divider", "Menubar", "Button"]
-        }
+    vite: {
+        plugins: [tailwindcss()]
     },
-    devServer: {
-        port: 5174,
-        host: "0.0.0.0"
-    },
+    compatibilityDate: "2025-06-22",
+    // devServer: {
+    //     port: 5174,
+    //     host: "0.0.0.0"
+    // },
     runtimeConfig: {
         apiKey: process.env.NUXT_API_KEY, // can be overridden by NUXT_API_SECRET environment variable
         public: {

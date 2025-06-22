@@ -2,7 +2,7 @@
     <svg
         height="560"
         viewBox=".628 .653 250.744 170.273"
-        width="2500"
+        width="900"
         xmlns="http://www.w3.org/2000/svg"
     >
         <g fill="none" fill-rule="evenodd">
@@ -16,14 +16,8 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
-    defineProps<{
-        fill?: string;
-        centerFill?: string;
-    }>(),
-    {
-        fill: "#FF0000",
-        centerFill: "#FFFFFF"
-    }
-);
+const { fill = "#FF0000", centerFill = "#FFFFFF" } = defineProps<{
+    fill?: string;
+    centerFill?: string;
+}>();
 </script>
