@@ -41,9 +41,7 @@ useHead({
         { name: "twitter:domain", content: "https://niek.io/" },
         { name: "twitter:url", content: `${"https://niek.io" + data.id}` },
         { name: "twitter:image", content: `${"https://cdn.niek.io/images/cover/" + data.id}` },
-        { name: "twitter:card", content: "summary_large_image" },
-
-        { name: "viewport", content: "width=device-width, initial-scale=1" }
+        { name: "twitter:card", content: "summary_large_image" }
     ]
 });
 </script>

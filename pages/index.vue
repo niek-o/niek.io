@@ -38,9 +38,7 @@ useHead({
         { name: "twitter:domain", content: "https://niek.io/" },
         { name: "twitter:url", content: "https://niek.io" },
         { name: "twitter:image", content: "https://niek.io/images/page_hero.png" },
-        { name: "twitter:card", content: "summary_large_image" },
-
-        { name: "viewport", content: "width=device-width, initial-scale=1" }
+        { name: "twitter:card", content: "summary_large_image" }
     ]
 });
 
