@@ -66,7 +66,7 @@ const headerColor = computed(() => {
 <template>
     <div class="w-full overflow-x-hidden font-text font-black">
         <section
-            class="sm:grid grid-cols-2 h-screen overflow-hidden sm:bg-center bg-cover sm:bg-contain bg-left bg-[url('/images/page_hero.png')] sm:bg-[url('/images/grunge2.webp')] non-drag"
+            class="sm:grid grid-cols-2 h-[dvh] overflow-hidden sm:bg-center bg-cover sm:bg-contain bg-left bg-[url('/images/page_hero.png')] sm:bg-[url('/images/grunge2.webp')] non-drag"
             ref="hero"
         >
             <div class="m-auto px-10 sm:p-0 h-full justify-center flex flex-col">
@@ -165,7 +165,7 @@ const headerColor = computed(() => {
                             I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS
                         </h2>
 
-                        <div class="sm:flex items-end hidden">
+                        <div class="xl:flex items-end hidden">
                             <div class="flex flex-row gap-4 items-center">
                                 <h1 class="text-8xl text-white">✧</h1>
                                 <nuxt-img src="/images/upc.webp" class="w-auto h-20"></nuxt-img>
@@ -173,7 +173,7 @@ const headerColor = computed(() => {
                         </div>
                     </div>
 
-                    <div class="w-full h-[30rem] -mt-24 overflow-hidden block sm:hidden">
+                    <div class="w-full h-[30rem] -mt-20 overflow-hidden block sm:hidden">
                         <nuxt-img
                             src="/images/about_transparent.webp"
                             class="w-full mt-24 h-auto non-drag scale-[5.0] transform-[translateX(33%)]"
@@ -182,7 +182,7 @@ const headerColor = computed(() => {
 
                     <!-- <hr class="border-2 border-white w-full" /> -->
                     <div class="px-4 md:px-12 sm:flex sm:justify-end">
-                        <h2 class="text-xl sm:text-4xl text-white sm:text-right sm:max-w-4/12">
+                        <h2 class="text-xl sm:text-4xl text-white sm:text-right sm:max-w-4/12 z-10">
                             I WAS BORN HALF-DEAF, AND HOPE TO INSPIRE EVERYONE WITH MY PASSION FOR
                             MUSIC, AND PROVE THAT YOU CAN DO ANYTHING, NO MATTER WHAT
                         </h2>
@@ -262,7 +262,7 @@ const headerColor = computed(() => {
             </div>
 
             <div class="flex flex-col justify-center items-center text-center gap-16">
-                <div class="flex flex-col items-center sm:flex-row gap-8">
+                <div class="flex items-center flex-row gap-6 sm:gap-8">
                     <hover-item>
                         <a
                             href="https://www.youtube.com/@Niek__o"
@@ -270,7 +270,7 @@ const headerColor = computed(() => {
                             target="_blank"
                         >
                             <icons-youtube-icon
-                                class="w-auto h-14 sm:h-20"
+                                class="w-auto h-10 sm:h-20"
                                 fill="#FFFFFF"
                                 center-fill="#000000"
                             />
@@ -284,7 +284,7 @@ const headerColor = computed(() => {
                             target="_blank"
                         >
                             <icons-soundcloud-icon
-                                class="w-auto h-14 sm:h-20"
+                                class="w-auto h-10 sm:h-20"
                                 fill="#FFFFFF"
                                 center-fill="#000000"
                             />
@@ -298,7 +298,7 @@ const headerColor = computed(() => {
                             target="_blank"
                         >
                             <icons-spotify-icon
-                                class="w-auto h-14 sm:h-20"
+                                class="w-auto h-10 sm:h-20"
                                 fill="#FFFFFF"
                                 center-fill="#000000"
                             />
@@ -312,7 +312,7 @@ const headerColor = computed(() => {
                             target="_blank"
                         >
                             <icons-instagram-icon
-                                class="w-auto h-14 sm:h-20"
+                                class="w-auto h-10 sm:h-20"
                                 fill="#FFFFFF"
                                 center-fill="#000000"
                             />
