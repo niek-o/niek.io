@@ -66,7 +66,7 @@ const headerColor = computed(() => {
 <template>
     <div class="w-full overflow-x-hidden font-text font-black">
         <section
-            class="sm:grid grid-cols-2 h-[dvh] overflow-hidden sm:bg-center bg-cover sm:bg-contain bg-left bg-[url('/images/page_hero.png')] sm:bg-[url('/images/grunge2.webp')] non-drag"
+            class="sm:grid grid-cols-2 h-[dvh] md:h-screen overflow-hidden sm:bg-center bg-cover sm:bg-contain bg-left bg-[url('/images/page_hero.png')] sm:bg-[url('/images/grunge2.webp')] non-drag"
             ref="hero"
         >
             <div class="m-auto px-10 sm:p-0 h-full justify-center flex flex-col">
