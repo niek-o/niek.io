@@ -19,23 +19,32 @@ onMounted(() => {
 });
 
 useHead({
-    title: "NIEK",
+    title: "NIEK | DJ & PRODUCER",
     htmlAttrs: {
         lang: "en"
     },
     meta: [
-        { name: "title", content: "NIEK" },
-        { name: "description", content: `DJ AND PRODUCER` },
+        { name: "title", content: "NIEK | DJ & PRODUCER" },
+        {
+            name: "description",
+            content: ` I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
+        },
 
-        { name: "og:title", content: "NIEK" },
-        { name: "og:description", content: `DJ AND PRODUCER` },
+        { name: "og:title", content: "NIEK | DJ & PRODUCER" },
+        {
+            name: "og:description",
+            content: ` I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
+        },
         { name: "og:image", content: "https://niek.io/images/page_hero.png" },
         { name: "og:url", content: "https://niek.io" },
 
         { name: "theme-color", content: "#000000" },
 
-        { name: "twitter:title", content: "NIEK" },
-        { name: "twitter:description", content: `DJ & PRODUCER` },
+        { name: "twitter:title", content: "NIEK | DJ & PRODUCER" },
+        {
+            name: "twitter:description",
+            content: ` I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
+        },
         { name: "twitter:domain", content: "https://niek.io/" },
         { name: "twitter:url", content: "https://niek.io" },
         { name: "twitter:image", content: "https://niek.io/images/page_hero.png" },
@@ -105,18 +114,17 @@ const config: CarouselConfig = {
     <div class="w-full overflow-x-hidden font-text font-black">
         <section
             class="sm:grid grid-cols-2 h-[100dvh] md:h-screen overflow-hidden sm:bg-center bg-cover sm:bg-contain bg-left bg-[url('/images/page_hero.png')] sm:bg-[url('/images/grunge2.webp')] non-drag"
-            ref="hero"
         >
             <div class="m-auto px-10 sm:p-0 h-full justify-center flex flex-col">
-                <h1 class="text-7xl sm:text-9xl text-white">✧</h1>
+                <span class="text-7xl sm:text-9xl text-white">✧</span>
                 <div class="flex flex-col items-center sm:px-32">
-                    <h1 class="text-8xl sm:text-9xl text-transparent text-outline">NIEK</h1>
-                    <h1 class="text-8xl sm:text-9xl text-transparent text-outline">NIEK</h1>
+                    <span class="text-8xl sm:text-9xl text-transparent text-outline">NIEK</span>
+                    <span class="text-8xl sm:text-9xl text-transparent text-outline">NIEK</span>
                     <h1 class="text-8xl sm:text-9xl text-white">NIEK</h1>
-                    <h1 class="text-8xl sm:text-9xl text-transparent text-outline">NIEK</h1>
-                    <h1 class="text-8xl sm:text-9xl text-transparent text-outline">NIEK</h1>
+                    <span class="text-8xl sm:text-9xl text-transparent text-outline">NIEK</span>
+                    <span class="text-8xl sm:text-9xl text-transparent text-outline">NIEK</span>
                 </div>
-                <h1 class="text-7xl sm:text-9xl text-white place-self-end">✧</h1>
+                <span class="text-7xl sm:text-9xl text-white place-self-end">✧</span>
             </div>
 
             <nuxt-img
@@ -127,26 +135,25 @@ const config: CarouselConfig = {
 
         <main
             class="bg-center overflow-hidden bg-contain bg-[url('/images/grunge2.webp')] non-drag flex flex-col place-items-center pb-24 gap-12 bg-white relative"
-            ref="trackList"
         >
             <nuxt-img
                 src="/images/globe.svg"
                 class="stroke-blue-500 scale-[15.0] sm:scale-125 absolute -mt-96"
             ></nuxt-img>
             <div class="flex flex-row z-10">
-                <h1 class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small">
+                <span class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small">
                     DISCOGRAPHY
-                </h1>
-                <h1 class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small">
+                </span>
+                <span class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small">
                     DISCOGRAPHY
-                </h1>
-                <h1 class="text-5xl sm:text-9xl text-white">DISCOGRAPHY</h1>
-                <h1 class="text-5xl sm:text-9xl text-transparent text-outline-small text-outline">
+                </span>
+                <h2 class="text-5xl sm:text-9xl text-white">DISCOGRAPHY</h2>
+                <span class="text-5xl sm:text-9xl text-transparent text-outline-small text-outline">
                     DISCOGRAPHY
-                </h1>
-                <h1 class="text-5xl sm:text-9xl text-transparent text-outline-small text-outline">
+                </span>
+                <span class="text-5xl sm:text-9xl text-transparent text-outline-small text-outline">
                     DISCOGRAPHY
-                </h1>
+                </span>
             </div>
 
             <carousel v-bind="config" class="w-screen">
@@ -166,52 +173,51 @@ const config: CarouselConfig = {
 
         <section
             class="bg-center bg-contain bg-[url('/images/grunge2.webp')] non-drag flex flex-col justify-center place-items-center gap-12"
-            ref="aboutme"
         >
             <div class="flex flex-row z-10">
-                <h1
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     ABOUT ME
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     ABOUT ME
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     ABOUT ME
-                </h1>
-                <h1 class="text-5xl sm:text-9xl text-white text-nowrap">ABOUT ME</h1>
-                <h1
+                </span>
+                <h2 class="text-5xl sm:text-9xl text-white text-nowrap">ABOUT ME</h2>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     ABOUT ME
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     ABOUT ME
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     ABOUT ME
-                </h1>
+                </span>
             </div>
 
             <div class="flex flex-col">
                 <div class="gap-6 flex flex-col">
                     <div class="flex flex-row px-4 md:px-12 w-full justify-between">
-                        <h2 class="text-xl sm:text-4xl text-white sm:max-w-4/12">
+                        <p class="text-xl sm:text-4xl text-white sm:max-w-4/12">
                             I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS
-                        </h2>
+                        </p>
 
                         <div class="xl:flex items-end hidden">
                             <div class="flex flex-row gap-4 items-center">
-                                <h1 class="text-8xl text-white">✧</h1>
+                                <span class="text-8xl text-white">✧</span>
                                 <nuxt-img src="/images/upc.webp" class="w-auto h-20"></nuxt-img>
                             </div>
                         </div>
@@ -226,10 +232,10 @@ const config: CarouselConfig = {
 
                     <!-- <hr class="border-2 border-white w-full" /> -->
                     <div class="px-4 md:px-12 sm:flex sm:justify-end">
-                        <h2 class="text-xl sm:text-4xl text-white sm:text-right sm:max-w-4/12 z-10">
+                        <p class="text-xl sm:text-4xl text-white sm:text-right sm:max-w-4/12 z-10">
                             I WAS BORN HALF-DEAF, AND HOPE TO INSPIRE EVERYONE WITH MY PASSION FOR
                             MUSIC, AND PROVE THAT YOU CAN DO ANYTHING, NO MATTER WHAT
-                        </h2>
+                        </p>
                     </div>
 
                     <div class="w-full h-[30rem] mt-48 block sm:hidden overflow-visible">
@@ -249,60 +255,59 @@ const config: CarouselConfig = {
 
         <section
             class="bg-center bg-contain bg-[url('/images/grunge2.webp')] non-drag flex flex-col justify-center place-items-center gap-48 pb-48"
-            ref="links"
         >
             <div class="flex flex-row z-10">
-                <h1
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1 class="text-5xl sm:text-9xl text-white text-nowrap">LINKS</h1>
-                <h1
+                </span>
+                <h2 class="text-5xl sm:text-9xl text-white text-nowrap">LINKS</h2>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
-                <h1
+                </span>
+                <span
                     class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small text-nowrap"
                 >
                     LINKS
-                </h1>
+                </span>
             </div>
 
             <div class="flex flex-col justify-center items-center text-center gap-48">
@@ -375,7 +380,7 @@ const config: CarouselConfig = {
                 </div>
 
                 <div class="flex flex-col gap-2">
-                    <h1 class="text-white text-lg sm:text-3xl">FOR BOOKINGS AND INQUIRIES:</h1>
+                    <h3 class="text-white text-lg sm:text-3xl">FOR BOOKINGS AND INQUIRIES:</h3>
                     <a
                         href="mailto:contact@niek.io"
                         class="text-white text-lg sm:text-2xl underline font-normal"
