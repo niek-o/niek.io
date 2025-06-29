@@ -8,15 +8,7 @@ const getTrackData = async () => {
     return (await data.value) as pageOptions[];
 };
 
-const data = await getTrackData();
-
-const scrollPosition = ref<any>(0);
-
-onMounted(() => {
-    window.addEventListener("scroll", () => {
-        scrollPosition.value = window.scrollY;
-    });
-});
+const tracks = await getTrackData();
 
 useHead({
     title: "NIEK | DJ & PRODUCER",
@@ -50,26 +42,6 @@ useHead({
         { name: "twitter:image", content: "https://niek.io/images/page_hero.png" },
         { name: "twitter:card", content: "summary_large_image" }
     ]
-});
-
-const trackList = ref<HTMLElement | null>(null);
-
-const scrollTo = (element: HTMLElement | null) => {
-    element?.scrollIntoView({ behavior: "smooth" });
-};
-
-const hero = ref();
-
-const headerColor = computed(() => {
-    if (!hero.value) {
-        return;
-    }
-
-    return scrollPosition.value > hero.value.scrollHeight - 100
-        ? "bg-black"
-        : scrollPosition.value > 10
-          ? "bg-black bg-opacity-30"
-          : "bg-transparent";
 });
 
 const config: CarouselConfig = {
@@ -129,7 +101,10 @@ const config: CarouselConfig = {
 
             <nuxt-img
                 src="/images/page_hero.png"
-                class="h-full w-auto place-self-end hidden sm:block"
+                class="h-full w-auto place-self-end hidden sm:block aspect-[766/929]"
+                width="766"
+                height="929"
+                alt="Hero image"
             />
         </section>
 
@@ -139,6 +114,7 @@ const config: CarouselConfig = {
             <nuxt-img
                 src="/images/globe.svg"
                 class="stroke-blue-500 scale-[15.0] sm:scale-125 absolute -mt-96"
+                alt="Globe background"
             ></nuxt-img>
             <div class="flex flex-row z-10">
                 <span class="text-5xl sm:text-9xl text-transparent text-outline text-outline-small">
@@ -157,7 +133,7 @@ const config: CarouselConfig = {
             </div>
 
             <carousel v-bind="config" class="w-screen">
-                <slide v-for="track in data" :key="track.id">
+                <slide v-for="track in tracks" :key="track.id">
                     <hover-item class="z-10">
                         <nuxt-link :to="track.id" class="drop-shadow-lg non-drag">
                             <track-card card-type="simple" :track="track" />
@@ -218,7 +194,11 @@ const config: CarouselConfig = {
                         <div class="xl:flex items-end hidden">
                             <div class="flex flex-row gap-4 items-center">
                                 <span class="text-8xl text-white">✧</span>
-                                <nuxt-img src="/images/upc.webp" class="w-auto h-20"></nuxt-img>
+                                <nuxt-img
+                                    src="/images/upc.webp"
+                                    class="w-auto h-20"
+                                    alt="Barcode"
+                                ></nuxt-img>
                             </div>
                         </div>
                     </div>
@@ -227,6 +207,7 @@ const config: CarouselConfig = {
                         <nuxt-img
                             src="/images/about_transparent.webp"
                             class="w-full mt-24 h-auto non-drag scale-[5.0] transform-[translateX(33%)]"
+                            alt="AboutImage"
                         ></nuxt-img>
                     </div>
 
@@ -242,6 +223,7 @@ const config: CarouselConfig = {
                         <nuxt-img
                             src="/images/about_transparent.webp"
                             class="w-full h-auto non-drag scale-[5.0]"
+                            alt="AboutImage"
                         ></nuxt-img>
                     </div>
                 </div>
@@ -249,6 +231,7 @@ const config: CarouselConfig = {
                 <nuxt-img
                     src="/images/about_transparent.webp"
                     class="w-full h-auto -mt-[40rem] non-drag sm:block hidden"
+                    alt="AboutImage"
                 ></nuxt-img>
             </div>
         </section>
