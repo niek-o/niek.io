@@ -13,6 +13,9 @@
     "prettier": "^3.3.0",
     "vue3-carousel-nuxt": "1.1.6"
   },
+  "overrides": {
+    "css-select": "6.0.0"
+  },
   "dependencies": {
     "1llest-waveform-vue": "^1.2.0",
     "@nuxt/image": "^1.7.0",
