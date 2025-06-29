@@ -118,10 +118,10 @@ const playpause = () => {
 
 <template>
     <div
-        class="text-center"
+        class="text-center w-full mx-auto"
         :class="{
-            'w-[85vw] sm:w-[35rem]': cardType === 'full',
-            'w-80 sm:w-[25rem]': cardType === 'simple'
+            'max-w-[85vw] sm:max-w-[35rem]': cardType === 'full',
+            'max-w-[80vw] sm:max-w-[25rem] pb-1': cardType === 'simple'
         }"
         :style="{ backgroundColor: backgroundColor, color: accentColor }"
     >
@@ -152,7 +152,7 @@ const playpause = () => {
             >
                 {{ title }}
             </h3>
-            <span class="text-xl font-normal">{{ subtitle }}</span>
+            <span class="text-lg font-normal">{{ subtitle }}</span>
         </div>
         <div v-if="cardType === 'full'">
             <div class="flex flex-col gap-3 p-6">

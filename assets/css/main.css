@@ -32,6 +32,17 @@
     }
 }
 
+.carousel {
+    --vc-nav-color: white;
+    --vc-nav-color-hover: #d8d8d8;
+    --vc-nav-border-radius: 50%;
+    --vc-nav-width: 40px;
+    --vc-nav-height: 40px;
+}
+
+.carousel__viewport {
+    overflow: visible;
+}
 
 .non-drag {
     -webkit-user-select: none;
