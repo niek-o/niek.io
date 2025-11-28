@@ -10,6 +10,21 @@ const getTrackData = async () => {
 
 const tracks = await getTrackData();
 
+const getAge = () => {
+    const birthday = new Date("10-10-2003");
+
+    let years = new Date().getFullYear() - birthday.getFullYear();
+    let month = new Date().getMonth() - birthday.getMonth();
+    let dateDiff = new Date().getDay() - birthday.getDay();
+    if (dateDiff < 0) {
+        month -= 1;
+    }
+    if (month < 0) {
+        years -= 1;
+    }
+    return years;
+};
+
 useHead({
     title: "NIEK | DJ & PRODUCER",
     htmlAttrs: {
@@ -188,7 +203,9 @@ const config: CarouselConfig = {
                 <div class="gap-6 flex flex-col">
                     <div class="flex flex-row px-4 md:px-12 w-full justify-between">
                         <p class="text-xl sm:text-4xl text-white sm:max-w-4/12">
-                            I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS
+                            I'M NIEK, A
+                            {{ getAge() }}
+                            YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS
                         </p>
 
                         <div class="xl:flex items-end hidden">
