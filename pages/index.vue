@@ -342,7 +342,7 @@ const config: CarouselConfig = {
 
                     <hover-item>
                         <a
-                            href="https://open.spotify.com/artist/6PXPX1pIxajf1IpgMOJjYS?si=UPzRRIrJT5WpYKp1eWRQcg"
+                            href="https://open.spotify.com/artist/6PXPX1pIxajf1IpgMOJjYS"
                             aria-label="Spotify"
                             target="_blank"
                         >
