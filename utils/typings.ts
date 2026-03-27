@@ -8,7 +8,7 @@ export type pageOptions = {
     links: Array<trackLink>;
 };
 
-export type musicPlatform = "youtube" | "soundcloud" | "spotify";
+export type musicPlatform = "youtube" | "soundcloud" | "spotify" | "freedl";
 
 export type trackLink = {
     url: string;
