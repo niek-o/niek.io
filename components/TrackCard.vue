@@ -2,6 +2,7 @@
 import SoundcloudIcon from "@/components/icons/SoundcloudIcon.vue";
 import SpotifyIcon from "@/components/icons/SpotifyIcon.vue";
 import YoutubeIcon from "@/components/icons/YoutubeIcon.vue";
+import DownloadIcon from "@/components/icons/DownloadIcon.vue";
 import type { IllestWaveformProps } from "~/utils/1llest-waveform";
 import { IllestWaveform } from "~/utils/1llest-waveform";
 import type { pageOptions } from "~/utils/typings";
@@ -215,6 +216,18 @@ const playpause = () => {
                             v-else-if="link.platform === 'spotify'"
                             aria-label="Stream on spotify"
                         />
+                        <div class="relative inline-block" v-else-if="link.platform === 'freedl'">
+                            <download-icon
+                                class="w-12 h-12 sm:w-16 sm:h-16 border-[1px] sm:border-2 border-white rounded-lg p-2"
+                                aria-label="Free download"
+                            />
+
+                            <span
+                                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-semibold px-2 py-[2px] rounded-full shadow"
+                            >
+                                FREE
+                            </span>
+                        </div>
                     </a>
                 </div>
             </div>

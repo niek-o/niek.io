@@ -34,13 +34,13 @@ useHead({
         { name: "title", content: "NIEK | DJ & PRODUCER" },
         {
             name: "description",
-            content: ` I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
+            content: ` I'M NIEK, A ${getAge()} YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
         },
 
         { name: "og:title", content: "NIEK | DJ & PRODUCER" },
         {
             name: "og:description",
-            content: ` I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
+            content: ` I'M NIEK, A ${getAge()} YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
         },
         { name: "og:image", content: "https://niek.io/images/page_hero.png" },
         { name: "og:url", content: "https://niek.io" },
@@ -50,7 +50,7 @@ useHead({
         { name: "twitter:title", content: "NIEK | DJ & PRODUCER" },
         {
             name: "twitter:description",
-            content: ` I'M NIEK, A 21 YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
+            content: ` I'M NIEK, A ${getAge()} YEAR OLD DJ AND PRODUCER FROM THE HAGUE, THE NETHERLANDS`
         },
         { name: "twitter:domain", content: "https://niek.io/" },
         { name: "twitter:url", content: "https://niek.io" },
